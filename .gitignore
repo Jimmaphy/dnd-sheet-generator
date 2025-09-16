@@ -1,0 +1,11 @@
+# The vscode folder
+.vscode/
+
+# Zip files
+*.zip
+
+# Executable files
+dnd-sheet-generator
+
+# Everything within a folder called storage that can be anywhere in the project
+**/storage/**
