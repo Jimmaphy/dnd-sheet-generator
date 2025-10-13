@@ -4,21 +4,25 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/jimmaphy/dnd-sheet-generator/services"
+	"github.com/jimmaphy/dnd-sheet-generator/bin"
 )
 
 func main() {
-	templateService, err := services.NewTemplateService("usage.txt")
+	command, err := bin.GetCommander("usage")
 	if err != nil {
 		fmt.Println(err)
-		os.Exit(1)
+		return
 	}
 
-	content, err := templateService.GetTemplateContent()
+	err = command.ParseArguments(os.Args[1:])
 	if err != nil {
 		fmt.Println(err)
-		os.Exit(1)
+		return
 	}
 
-	fmt.Print(content)
+	err = command.Execute()
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
 }
