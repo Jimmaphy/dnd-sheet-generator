@@ -10,19 +10,14 @@ import (
 func main() {
 	command, err := bin.GetCommander("usage")
 	if err != nil {
+		bin.ExecuteCommand(command, os.Args[1:])
 		fmt.Println(err)
-		return
+		os.Exit(1)
 	}
 
-	err = command.ParseArguments(os.Args[1:])
+	err = bin.ExecuteCommand(command, os.Args[1:])
 	if err != nil {
 		fmt.Println(err)
-		return
-	}
-
-	err = command.Execute()
-	if err != nil {
-		fmt.Println(err)
-		return
+		os.Exit(1)
 	}
 }
