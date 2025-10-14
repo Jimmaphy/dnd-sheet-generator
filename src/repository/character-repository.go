@@ -1,0 +1,7 @@
+package repository
+
+import "github.com/jimmaphy/dnd-sheet-generator/domain"
+
+type CharacterRepository interface {
+	Add(character *domain.Character) error
+}
