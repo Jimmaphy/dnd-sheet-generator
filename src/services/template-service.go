@@ -26,8 +26,8 @@ func NewTemplateService(template string) (*TemplateService, error) {
 
 // Read and return the content of the template file.
 // An error is returned if the file cannot be read.
-func (ts *TemplateService) GetTemplateContent() (string, error) {
-	content, err := os.ReadFile(ts.filepath)
+func (service *TemplateService) GetTemplateContent() (string, error) {
+	content, err := os.ReadFile(service.filepath)
 	if err != nil {
 		return "", errors.New("error reading template file: " + err.Error())
 	}

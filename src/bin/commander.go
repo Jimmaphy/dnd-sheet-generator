@@ -7,6 +7,7 @@ import (
 var commands = map[string]func() Command{
 	"default": NewUsageCommand,
 	"usage":   NewUsageCommand,
+	"create":  NewCreateCommand,
 }
 
 // GetCommander returns a Command instance based on the provided name.
