@@ -4,17 +4,16 @@ import (
 	"encoding/json"
 	"errors"
 	"os"
+	"strings"
 )
 
 type JSONService struct {
-	filePath string
+	folder string
 }
 
-// Create a new instance of JSONService with the specified folder and filename.
-// The folder is where the JSON file will be stored, and the filename is the name of the JSON file.
-// Before creating the service, ensure that the folder exists or create it if it doesn't.
-// The extension and path seperators are handled internally.
-func NewJSONService(folder, filename string) (*JSONService, error) {
+// A new instance of JSONService is created with for the specified folder.
+// The folder will be placed inside the storage directory, creating it if it doesn't exist.
+func NewJSONService(folder string) (*JSONService, error) {
 	folderPath := "storage/" + folder
 	err := os.MkdirAll(folderPath, os.ModePerm)
 	if err != nil {
@@ -22,17 +21,20 @@ func NewJSONService(folder, filename string) (*JSONService, error) {
 	}
 
 	return &JSONService{
-		filePath: folderPath + "/" + filename + ".json",
+		folder: folderPath,
 	}, nil
 }
 
-// Save will save the provided data as a JSON file
+// Save will create or overwrite a JSON file with the specified name in the service's folder.
+// The exetension ".json" will be automatically added to the file name.
 // Any file with the same name will be overwritten.
 // The data parameter should be a struct that can be marshaled into JSON format.
-func (service *JSONService) Save(data any) error {
-	file, err := os.Create(service.filePath)
+func (service *JSONService) Save(fileName string, data any) error {
+	filePath := service.folder + "/" + fileName + ".json"
+
+	file, err := os.Create(filePath)
 	if err != nil {
-		return errors.New("error while creating JSON file: " + service.filePath)
+		return errors.New("error while creating JSON file: " + filePath)
 	}
 
 	defer file.Close()
@@ -41,8 +43,27 @@ func (service *JSONService) Save(data any) error {
 
 	err = encoder.Encode(data)
 	if err != nil {
-		return errors.New("error while encoding JSON data: " + service.filePath)
+		return errors.New("error while encoding JSON data: " + filePath)
 	}
 
 	return nil
+}
+
+// List will read the folder containing JSON files and return a list of file names without the ".json" extension.
+// If the folder does not exist or cannot be read, an error will be returned.
+func (service *JSONService) List() ([]string, error) {
+	entries, err := os.ReadDir(service.folder)
+	if err != nil {
+		return nil, errors.New("error while reading JSON directory: " + service.folder)
+	}
+
+	var characterNames []string = []string{}
+	for _, entry := range entries {
+		if strings.HasSuffix(entry.Name(), ".json") {
+			name := strings.TrimSuffix(entry.Name(), ".json")
+			characterNames = append(characterNames, name)
+		}
+	}
+
+	return characterNames, nil
 }
