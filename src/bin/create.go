@@ -10,8 +10,8 @@ import (
 )
 
 type CreateCommand struct {
-	name string,
-	race string,
+	name string
+	race string
 }
 
 // NewCreateCommand creates a new instance of CreateCommand.
@@ -48,7 +48,9 @@ func (command *CreateCommand) ParseArguments(args []string) error {
 // It creates a character and saves it to a JSON file using the repository package.
 func (command *CreateCommand) Execute() error {
 	character := domain.NewCharacter(command.name)
-	race := domain.NewRace(command.name)
+
+	race := domain.NewRace(command.race)
+	character.SetRace(race)
 
 	err := repository.NewCharacterJSONRepository().Add(character)
 	if err != nil {
