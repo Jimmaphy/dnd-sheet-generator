@@ -67,3 +67,15 @@ func (service *JSONService) List() ([]string, error) {
 
 	return characterNames, nil
 }
+
+// Delete will remove the JSON file with the specified name from the service's folder.
+// The exetension ".json" will be automatically added to the file name.
+// If the file does not exist, this function does nothing.
+func (service *JSONService) Delete(fileName string) error {
+	filePath := service.folder + "/" + fileName + ".json"
+	if _, err := os.Stat(filePath); os.IsNotExist(err) {
+		return nil
+	}
+
+	return os.Remove(filePath)
+}

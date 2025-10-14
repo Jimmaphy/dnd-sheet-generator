@@ -1,12 +1,14 @@
 package domain
 
 type Race struct {
-	name string
+	Name string
 }
 
 // Create a new race based on the provided name.
 func NewRace(name string) *Race {
-	return &Race{name: name}
+	return &Race{
+		Name: name,
+	}
 }
 
 // AddRace will add the provided race to the character.

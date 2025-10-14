@@ -44,3 +44,13 @@ func (repository *CharacterJSONRepository) List() ([]string, error) {
 
 	return characterNames, nil
 }
+
+// Delete removes a character from the repository by name
+func (repository *CharacterJSONRepository) Delete(name string) error {
+	jsonService, err := services.NewJSONService(repository.folder)
+	if err != nil {
+		return err
+	}
+
+	return jsonService.Delete(name)
+}
