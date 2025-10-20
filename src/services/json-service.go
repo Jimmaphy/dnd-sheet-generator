@@ -79,3 +79,43 @@ func (service *JSONService) Delete(fileName string) error {
 
 	return os.Remove(filePath)
 }
+
+// Read will open and decode the JSON file with the specified name from the service's folder.
+// The exetension ".json" will be automatically added to the file name.
+// The data parameter should be a pointer to a struct where the decoded JSON data will be stored.
+func (service *JSONService) Read(fileName string, dataStructure any) error {
+	filePath := service.folder + "/" + fileName + ".json"
+
+	file, err := os.Open(filePath)
+	if err != nil {
+		return errors.New("error while opening JSON file: " + filePath)
+	}
+	defer file.Close()
+
+	decoder := json.NewDecoder(file)
+	err = decoder.Decode(dataStructure)
+	if err != nil {
+		return errors.New("error while decoding JSON data: " + filePath)
+	}
+
+	return nil
+}
+
+// ReadCaseInsensitive will read a JSON file in a case-insensitive manner.
+// It searches for a file matching the provided name, ignoring case differences.
+// If a matching file is found, it decodes the JSON data into the provided data structure.
+// If no matching file is found, an error is returned.
+func (service *JSONService) ReadCaseInsensitive(fileName string, dataStructure any) error {
+	files, err := service.List()
+	if err != nil {
+		return err
+	}
+
+	for _, file := range files {
+		if strings.EqualFold(file, fileName) {
+			return service.Read(file, dataStructure)
+		}
+	}
+
+	return errors.New("file not found: " + fileName)
+}

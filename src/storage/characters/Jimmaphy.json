@@ -1,0 +1,49 @@
+{
+  "Name": "Jimmaphy",
+  "Race": {
+    "Name": "human",
+    "SkillModifiers": {
+      "Strength": 1,
+      "Dexterity": 1,
+      "Constitution": 1,
+      "Intelligence": 1,
+      "Wisdom": 1,
+      "Charisma": 1
+    }
+  },
+  "Class": {
+    "Name": "barbarian",
+    "Skills": [
+      "animal handling",
+      "athletics",
+      "intimidation",
+      "nature",
+      "perception",
+      "survival"
+    ]
+  },
+  "Background": {
+    "Name": "acolyte",
+    "Skills": [
+      "insight",
+      "religion"
+    ]
+  },
+  "Level": 1,
+  "BaseSkills": {
+    "Strength": 10,
+    "Dexterity": 10,
+    "Constitution": 10,
+    "Intelligence": 10,
+    "Wisdom": 10,
+    "Charisma": 10
+  },
+  "TotalSkills": {
+    "Strength": 11,
+    "Dexterity": 11,
+    "Constitution": 11,
+    "Intelligence": 11,
+    "Wisdom": 11,
+    "Charisma": 11
+  }
+}

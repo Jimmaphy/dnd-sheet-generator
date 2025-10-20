@@ -3,6 +3,7 @@ package bin
 import (
 	"errors"
 	"flag"
+	"fmt"
 
 	"github.com/jimmaphy/dnd-sheet-generator/repository"
 )
@@ -19,7 +20,7 @@ func NewDeleteCommand() Command {
 // The name flag is required.
 // If the name argument is missing, an error is returned.
 func (command *DeleteCommand) ParseArguments(args []string) error {
-	flagSet := flag.NewFlagSet("deleteFlags", flag.ExitOnError)
+	flagSet := flag.NewFlagSet("deleteFlags", flag.ContinueOnError)
 	flagSet.StringVar(&command.name, "name", "", "Name of the character to delete")
 
 	err := flagSet.Parse(args)
@@ -43,6 +44,6 @@ func (command *DeleteCommand) Execute() error {
 		return err
 	}
 
-	println("deleted", command.name)
+	fmt.Println("deleted", command.name)
 	return nil
 }

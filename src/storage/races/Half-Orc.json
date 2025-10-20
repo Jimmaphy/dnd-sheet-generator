@@ -1,0 +1,11 @@
+{
+    "Name": "half-orc",
+    "SkillModifiers": {
+        "Strength": 2,
+        "Dexterity": 0,
+        "Constitution": 1,
+        "Intelligence": 0,
+        "Wisdom": 0,
+        "Charisma": 0
+    }
+}

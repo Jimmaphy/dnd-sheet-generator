@@ -1,0 +1,11 @@
+{
+    "Name": "sorcerer",
+    "Skills": [
+        "arcana",
+        "deception",
+        "insight",
+        "intimidation",
+        "persuasion",
+        "religion"
+    ]
+}

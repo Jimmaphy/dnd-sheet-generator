@@ -10,6 +10,7 @@ var commands = map[string]func() Command{
 	"create":  NewCreateCommand,
 	"list":    NewListCommand,
 	"delete":  NewDeleteCommand,
+	"view":    NewViewCommand,
 }
 
 // GetCommander returns a Command instance based on the provided name.

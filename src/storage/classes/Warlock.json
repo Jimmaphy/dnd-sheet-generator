@@ -1,0 +1,12 @@
+{
+    "Name": "warlock",
+    "Skills": [
+        "arcana",
+        "deception",
+        "history",
+        "intimidation",
+        "investigation",
+        "nature",
+        "religion"
+    ]
+}

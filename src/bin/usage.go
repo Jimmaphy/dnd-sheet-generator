@@ -21,7 +21,7 @@ func (command *usageCommand) ParseArguments(args []string) error {
 // Execute reads and prints the usage instructions from the usage.txt template file.
 // If the file cannot be read, an error message is printed and the program exits with status 1.
 func (command *usageCommand) Execute() error {
-	templateService, err := services.NewTemplateService("usage.txt")
+	templateService, err := services.NewTemplateService("usage.go")
 	if err != nil {
 		return err
 	}

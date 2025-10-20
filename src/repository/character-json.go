@@ -54,3 +54,20 @@ func (repository *CharacterJSONRepository) Delete(name string) error {
 
 	return jsonService.Delete(name)
 }
+
+// Get retrieves a character from the repository by name
+// It returns the character if found, or an error if not found
+func (repository *CharacterJSONRepository) Get(name string) (*domain.Character, error) {
+	jsonService, err := services.NewJSONService(repository.folder)
+	if err != nil {
+		return nil, err
+	}
+
+	var character domain.Character
+	err = jsonService.Read(name, &character)
+	if err != nil {
+		return nil, err
+	}
+
+	return &character, nil
+}

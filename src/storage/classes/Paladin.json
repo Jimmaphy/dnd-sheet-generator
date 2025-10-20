@@ -1,0 +1,11 @@
+{
+    "Name": "paladin",
+    "Skills": [
+        "athletics",
+        "insight",
+        "intimidation",
+        "medicine",
+        "persuasion",
+        "religion"
+    ]
+}

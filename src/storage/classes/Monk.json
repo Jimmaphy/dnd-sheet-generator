@@ -1,0 +1,11 @@
+{
+    "Name": "monk",
+    "Skills": [
+        "acrobatics",
+        "athletics",
+        "history",
+        "insight",
+        "religion",
+        "stealth"
+    ]
+}

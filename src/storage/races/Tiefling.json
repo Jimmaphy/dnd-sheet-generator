@@ -1,0 +1,11 @@
+{
+    "Name": "tiefling",
+    "SkillModifiers": {
+        "Strength": 0,
+        "Dexterity": 0,
+        "Constitution": 0,
+        "Intelligence": 1,
+        "Wisdom": 0,
+        "Charisma": 2
+    }
+}

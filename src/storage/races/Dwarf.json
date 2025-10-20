@@ -1,0 +1,11 @@
+{
+    "Name": "dwarf",
+    "SkillModifiers": {
+        "Strength": 0,
+        "Dexterity": 0,
+        "Constitution": 2,
+        "Intelligence": 0,
+        "Wisdom": 0,
+        "Charisma": 0
+    }
+}

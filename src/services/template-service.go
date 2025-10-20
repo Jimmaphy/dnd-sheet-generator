@@ -3,6 +3,7 @@ package services
 import (
 	"errors"
 	"os"
+	"text/template"
 )
 
 type TemplateService struct {
@@ -33,4 +34,15 @@ func (service *TemplateService) GetTemplateContent() (string, error) {
 	}
 
 	return string(content), nil
+}
+
+// GetParsable applies the provided data to the template content.
+// It uses a given data structure to replace placeholders in the template.
+func (service *TemplateService) GetParsable() (*template.Template, error) {
+	parsable, err := template.ParseFiles(service.filepath)
+	if err != nil {
+		return nil, err
+	}
+
+	return parsable, nil
 }

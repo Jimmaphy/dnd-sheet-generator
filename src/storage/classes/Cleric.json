@@ -1,0 +1,10 @@
+{
+    "Name": "cleric",
+    "Skills": [
+        "history",
+        "insight",
+        "medicine",
+        "persuasion",
+        "religion"
+    ]
+}
