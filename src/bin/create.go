@@ -1,9 +1,9 @@
 package bin
 
 import (
-	"errors"
 	"flag"
 	"fmt"
+	"os"
 
 	"github.com/jimmaphy/dnd-sheet-generator/domain"
 	"github.com/jimmaphy/dnd-sheet-generator/repository"
@@ -51,7 +51,8 @@ func (command *CreateCommand) ParseArguments(args []string) error {
 	}
 
 	if command.name == "" {
-		return errors.New("name is required")
+		fmt.Println("name is required")
+		os.Exit(2)
 	}
 
 	return nil

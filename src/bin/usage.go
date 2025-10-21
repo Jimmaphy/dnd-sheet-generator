@@ -6,21 +6,21 @@ import (
 	"github.com/jimmaphy/dnd-sheet-generator/services"
 )
 
-type usageCommand struct{}
+type UsageCommand struct{}
 
-// Create a new instance of usageCommand.
+// Create a new instance of UsageCommand.
 func NewUsageCommand() Command {
-	return &usageCommand{}
+	return &UsageCommand{}
 }
 
-// ParseArguments for usageCommand does not require any arguments and always returns nil.
-func (command *usageCommand) ParseArguments(args []string) error {
+// ParseArguments for UsageCommand does not require any arguments and always returns nil.
+func (command *UsageCommand) ParseArguments(args []string) error {
 	return nil
 }
 
 // Execute reads and prints the usage instructions from the usage.txt template file.
 // If the file cannot be read, an error message is printed and the program exits with status 1.
-func (command *usageCommand) Execute() error {
+func (command *UsageCommand) Execute() error {
 	templateService, err := services.NewTemplateService("usage.go")
 	if err != nil {
 		return err
