@@ -12,6 +12,8 @@ var commands = map[string]func() Command{
 	"delete":  NewDeleteCommand,
 	"view":    NewViewCommand,
 	"equip":   NewEquipCommand,
+	"learn-spell": NewLearnSpellCommand,
+	"prepare-spell": NewPrepareSpellCommand,
 }
 
 // GetCommander returns a Command instance based on the provided name.

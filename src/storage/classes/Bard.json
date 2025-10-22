@@ -20,5 +20,6 @@
         "sleight of hand",
         "stealth",
         "survival"
-    ]
+    ],
+    "CasterType": "learned"
 }

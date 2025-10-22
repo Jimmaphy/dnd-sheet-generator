@@ -9,5 +9,6 @@
         "investigation",
         "nature",
         "religion"
-    ]
+    ],
+    "CasterType": "pact"
 }

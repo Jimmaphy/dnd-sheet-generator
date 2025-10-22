@@ -13,5 +13,6 @@
         "persuasion",
         "sleight of hand",
         "stealth"
-    ]
+    ],
+    "CasterType": "none"
 }

@@ -4,6 +4,7 @@ type Class struct {
 	Name       string
 	SkillCount int
 	Skills     []string
+	CasterType string
 }
 
 // Create a new class based on the provided name.

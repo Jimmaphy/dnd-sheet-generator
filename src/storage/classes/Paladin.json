@@ -8,5 +8,6 @@
         "medicine",
         "persuasion",
         "religion"
-    ]
+    ],
+    "CasterType": "prepared"
 }

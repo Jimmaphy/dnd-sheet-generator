@@ -12,9 +12,12 @@ import (
 // If no command is provided, it will continue with a default command.
 // It handles errors by printing them to the console and exiting with a non-zero status code.
 func main() {
+	var args []string
 	requestedCommand := "default"
+
 	if len(os.Args) > 1 {
 		requestedCommand = os.Args[1]
+		args = os.Args[2:]
 	}
 
 	command, err := bin.GetCommander(requestedCommand)
@@ -22,7 +25,7 @@ func main() {
 		fmt.Println(err)
 	}
 
-	err = bin.ExecuteCommand(command, os.Args[2:])
+	err = bin.ExecuteCommand(command, args)
 	if err != nil {
 		fmt.Println(err)
 	}

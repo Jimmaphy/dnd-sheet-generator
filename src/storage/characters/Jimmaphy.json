@@ -21,7 +21,8 @@
       "nature",
       "perception",
       "survival"
-    ]
+    ],
+    "CasterType": "none"
   },
   "Background": {
     "Name": "acolyte",
@@ -48,9 +49,7 @@
     "Charisma": 11
   },
   "MainHand": null,
-  "OffHand": {
-    "Name": "dagger"
-  },
+  "OffHand": null,
   "Armor": null,
   "Shield": null
 }

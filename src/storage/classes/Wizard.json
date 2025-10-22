@@ -8,5 +8,6 @@
         "investigation",
         "medicine",
         "religion"
-    ]
+    ],
+    "CasterType": "prepared"
 }

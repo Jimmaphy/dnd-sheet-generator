@@ -8,5 +8,6 @@
         "intimidation",
         "persuasion",
         "religion"
-    ]
+    ],
+    "CasterType": "learned"
 }

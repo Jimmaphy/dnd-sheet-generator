@@ -8,5 +8,6 @@
         "insight",
         "religion",
         "stealth"
-    ]
+    ],
+    "CasterType": "none"
 }

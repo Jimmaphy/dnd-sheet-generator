@@ -10,5 +10,6 @@
         "perception",
         "stealth",
         "survival"
-    ]
+    ],
+    "CasterType": "prepared"
 }

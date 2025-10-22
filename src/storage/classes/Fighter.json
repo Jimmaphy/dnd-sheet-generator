@@ -10,5 +10,6 @@
         "intimidation",
         "perception",
         "survival"
-    ]
+    ],
+    "CasterType": "none"
 }

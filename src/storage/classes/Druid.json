@@ -10,5 +10,6 @@
         "perception",
         "religion",
         "survival"
-    ]
+    ],
+    "CasterType": "prepared"
 }
