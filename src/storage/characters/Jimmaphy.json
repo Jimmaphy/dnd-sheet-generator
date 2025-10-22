@@ -13,6 +13,7 @@
   },
   "Class": {
     "Name": "barbarian",
+    "SkillCount": 2,
     "Skills": [
       "animal handling",
       "athletics",
@@ -45,5 +46,11 @@
     "Intelligence": 11,
     "Wisdom": 11,
     "Charisma": 11
-  }
+  },
+  "MainHand": null,
+  "OffHand": {
+    "Name": "dagger"
+  },
+  "Armor": null,
+  "Shield": null
 }

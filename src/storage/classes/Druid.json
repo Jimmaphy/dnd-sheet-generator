@@ -1,5 +1,6 @@
 {
     "Name": "druid",
+    "SkillCount": 2,
     "Skills": [
         "arcana",
         "animal handling",

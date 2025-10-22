@@ -11,4 +11,8 @@ Ability scores:
   WIS: {{.TotalSkills.Wisdom}} ({{.TotalSkills.GetWisdomModifierString}})
   CHA: {{.TotalSkills.Charisma}} ({{.TotalSkills.GetCharismaModifierString}})
 Proficiency bonus: {{.GetProficiencyBonus}}
-Skill proficiencies: {{.GetSkillProficiencyString}}
+Skill proficiencies: {{.GetSkillProficiencyString}}{{ if .MainHand }}
+Main hand: {{.MainHand.Name}}{{ end }}{{ if .OffHand }}
+Off hand: {{.OffHand.Name}}{{ end }}{{ if .Armor }}
+Armor: {{.Armor.Name}}{{ end }}{{ if .Shield }}
+Shield: {{.Shield.Name}}{{ end }}

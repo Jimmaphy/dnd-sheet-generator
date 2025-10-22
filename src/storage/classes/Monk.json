@@ -1,5 +1,6 @@
 {
     "Name": "monk",
+    "SkillCount": 2,
     "Skills": [
         "acrobatics",
         "athletics",

@@ -1,5 +1,6 @@
 {
     "Name": "sorcerer",
+    "SkillCount": 2,
     "Skills": [
         "arcana",
         "deception",

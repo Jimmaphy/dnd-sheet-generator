@@ -1,5 +1,6 @@
 {
     "Name": "paladin",
+    "SkillCount": 2,
     "Skills": [
         "athletics",
         "insight",

@@ -1,5 +1,6 @@
 {
     "Name": "barbarian",
+    "SkillCount": 2,
     "Skills": [
         "animal handling",
         "athletics",

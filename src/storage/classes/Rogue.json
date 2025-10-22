@@ -1,5 +1,6 @@
 {
     "Name": "rogue",
+    "SkillCount": 4,
     "Skills": [
         "acrobatics",
         "athletics",

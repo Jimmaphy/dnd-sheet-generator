@@ -1,5 +1,6 @@
 {
     "Name": "wizard",
+    "SkillCount": 2,
     "Skills": [
         "arcana",
         "history",

@@ -1,5 +1,6 @@
 {
     "Name": "warlock",
+    "SkillCount": 2,
     "Skills": [
         "arcana",
         "deception",

@@ -4,6 +4,7 @@ import (
 	"errors"
 	"flag"
 	"fmt"
+	"strings"
 
 	"github.com/jimmaphy/dnd-sheet-generator/domain"
 	"github.com/jimmaphy/dnd-sheet-generator/repository"
@@ -80,17 +81,62 @@ func (command *EquipCommand) Execute() error {
 	}
 }
 
+// Equip a piece of weapon to the character.
+// The weapon is equipped to either the main hand or off hand based on the slot argument.
+// This is determined by checking if the slot contains the word "main".
+// After equipping, the character is saved back to the repository.
 func (command *EquipCommand) equipWeapon(character *domain.Character) error {
-	fmt.Println("Executing state", command.state, "for", character.Name)
+	item := domain.NewWeapon(command.weapon)
+	mainHand := strings.Contains(strings.ToLower(command.slot), "main")
+
+	err := character.EquipWeapon(item, mainHand)
+	if err != nil {
+		return err
+	}
+
+	err = repository.NewCharacterJSONRepository().Add(character)
+	if err != nil {
+		return err
+	}
+
+	fmt.Println("Equipped weapon", command.weapon, "to", command.slot)
 	return nil
 }
 
+// Equip a piece of armor to the character.
+// After equipping, the character is saved back to the repository.
 func (command *EquipCommand) equipArmor(character *domain.Character) error {
-	fmt.Println("Executing state", command.state, "for", character.Name)
+	armor := domain.NewArmor(command.armor)
+
+	err := character.EquipArmor(armor)
+	if err != nil {
+		return err
+	}
+
+	err = repository.NewCharacterJSONRepository().Add(character)
+	if err != nil {
+		return err
+	}
+
+	fmt.Println("Equipped armor", command.armor)
 	return nil
 }
 
+// Equip a shield to the character.
+// After equipping, the character is saved back to the repository.
 func (command *EquipCommand) equipShield(character *domain.Character) error {
-	fmt.Println("Executing state", command.state, "for", character.Name)
+	shield := domain.NewShield(command.shield)
+
+	err := character.EquipShield(shield)
+	if err != nil {
+		return err
+	}
+
+	err = repository.NewCharacterJSONRepository().Add(character)
+	if err != nil {
+		return err
+	}
+
+	fmt.Println("Equipped shield", command.shield)
 	return nil
 }

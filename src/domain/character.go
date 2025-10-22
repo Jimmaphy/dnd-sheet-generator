@@ -15,6 +15,10 @@ type Character struct {
 	Level       int
 	BaseSkills  *SkillSet
 	TotalSkills *SkillSet
+	MainHand    *Weapon
+	OffHand     *Weapon
+	Armor       *Armor
+	Shield      *Shield
 }
 
 // NewCharacter creates a new Character instance with the given name.
@@ -45,6 +49,38 @@ func (character *Character) SetSkillSet(skillSet *SkillSet) {
 	character.BaseSkills = skillSet
 }
 
+// The equip method equips an item to the character.
+// The mainHand parameter indicates whether to equip to the main hand (true) or off hand (false).
+func (character *Character) EquipWeapon(weapon *Weapon, mainHand bool) error {
+	if mainHand {
+		if character.MainHand != nil {
+			return errors.New("main hand already occupied")
+		}
+
+		character.MainHand = weapon
+	} else {
+		if character.OffHand != nil {
+			return errors.New("off hand already occupied")
+		}
+
+		character.OffHand = weapon
+	}
+
+	return nil
+}
+
+// The EquipArmor method equips an armor to the character.
+func (character *Character) EquipArmor(armor *Armor) error {
+	character.Armor = armor
+	return nil
+}
+
+// The EquipShield method equips a shield to the character.
+func (character *Character) EquipShield(shield *Shield) error {
+	character.Shield = shield
+	return nil
+}
+
 // GetTotalStrength returns the total strength score of the character,
 // combining base skills with racial modifiers.
 func (character *Character) CalculateTotalSkills() error {
@@ -68,14 +104,16 @@ func (character *Character) GetProficiencyBonus() string {
 
 // GetSkillProficiencyString returns the skill proficiency string.
 // The skills are represented as a comma-separated list.
-// The first two skills come from the class, and the next two from the background.
+// First, the skills are taken from the character's class, based on the skill count.
+// Then two additional skills are taken from the character's background.
 func (character *Character) GetSkillProficiencyString() (string, error) {
 	if character.Class == nil || character.Background == nil {
 		return "", errors.New("cannot get skill proficiencies without class or background")
 	}
 
+	classSkillCount := character.Class.SkillCount
 	proficiencies := []string{}
-	proficiencies = append(proficiencies, character.Class.Skills[:2]...)
+	proficiencies = append(proficiencies, character.Class.Skills[:classSkillCount]...)
 	proficiencies = append(proficiencies, character.Background.Skills[:2]...)
 
 	return strings.Join(proficiencies, ", "), nil

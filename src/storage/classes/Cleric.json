@@ -1,5 +1,6 @@
 {
     "Name": "cleric",
+    "SkillCount": 2,
     "Skills": [
         "history",
         "insight",

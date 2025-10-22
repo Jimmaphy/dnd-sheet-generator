@@ -1,5 +1,6 @@
 {
     "Name": "fighter",
+    "SkillCount": 2,
     "Skills": [
         "acrobatics",
         "animal handling",

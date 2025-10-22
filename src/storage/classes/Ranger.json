@@ -1,5 +1,6 @@
 {
     "Name": "ranger",
+    "SkillCount": 3,
     "Skills": [
         "animal handling",
         "athletics",
