@@ -112,7 +112,7 @@ fi
 
 
 
-# Test 9: Add a basic weapon to a character
+# Test 9: Create a new character and add a basic weapon
 ./dcg create -name "Merry Brandybuck" -race "lightfoot halfling" -class rogue -str 8 -dex 15 -con 14 -int 10 -wis 12 -cha 13 >/dev/null 2>&1
 output=$(./dcg equip -name "Merry Brandybuck" -weapon shortsword -slot "main hand" 2>&1)
 
@@ -230,7 +230,97 @@ fi
 
 
 
+# Remove the test character and make new ones for spell tests
+./dcg delete -name "Merry Brandybuck" >/dev/null 2>&1
+./dcg create -name "Aragorn" -race "human" -class fighter -level 20 -str 10 -dex 13 -con 14 -int 10 -wis 12 -cha 15 >/dev/null 2>&1
+./dcg create -name "Gandalf" -race "human" -class wizard -level 20 -str 8 -dex 10 -con 12 -int 14 -wis 15 -cha 13 >/dev/null 2>&1
+./dcg create -name "Galadriel" -race "high elf" -class sorcerer -level 20 -str 8 -dex 10 -con 12 -int 15 -wis 14 -cha 13 >/dev/null 2>&1
+
+
+
+# Test 18: Prepare a spell
+output=$(./dcg prepare-spell -name "Gandalf" -spell "burning hands" 2>&1)
+
+if [[ $output == *"Prepared"* ]]; then
+    DND_TESTS_SUCCEEDED=$((DND_TESTS_SUCCEEDED + 1))
+    echo "Test 18 Passed: Spell prepared successfully."
+else
+    DND_TESTS_FAILED=$((DND_TESTS_FAILED + 1))
+    echo "Test 18 Failed: Spell not prepared."
+fi
+
+
+
+# Test 19: Learn a spell
+output=$(./dcg learn-spell -name "Galadriel" -spell "false life" 2>&1)
+
+if [[ $output == *"Learned"* ]]; then
+    DND_TESTS_SUCCEEDED=$((DND_TESTS_SUCCEEDED + 1))
+    echo "Test 19 Passed: Spell learned successfully."
+else
+    DND_TESTS_FAILED=$((DND_TESTS_FAILED + 1))
+    echo "Test 19 Failed: Spell not learned."
+fi
+
+
+
+# Test 20: Can't prepare a spell if you're a learner
+output=$(./dcg prepare-spell -name "Galadriel" -spell "false life" 2>&1)
+
+if [[ $output == *"learns"* ]]; then
+    DND_TESTS_SUCCEEDED=$((DND_TESTS_SUCCEEDED + 1))
+    echo "Test 20 Passed: Learner cannot prepare spell."
+else
+    DND_TESTS_FAILED=$((DND_TESTS_FAILED + 1))
+    echo "Test 20 Failed: Learner prepared spell."
+fi
+
+
+
+# Test 21: Can't learn a spell if you're a preparer
+output=$(./dcg learn-spell -name "Gandalf" -spell "burning hands" 2>&1)
+
+if [[ $output == *"prepares"* ]]; then
+    DND_TESTS_SUCCEEDED=$((DND_TESTS_SUCCEEDED + 1))
+    echo "Test 21 Passed: Preparer cannot learn spell."
+else
+    DND_TESTS_FAILED=$((DND_TESTS_FAILED + 1))
+    echo "Test 21 Failed: Preparer learned spell."
+fi
+
+
+
+# Test 22: Can't learn spell if you're not a spellcaster
+output=$(./dcg learn-spell -name "Aragorn" -spell "fireball" 2>&1)
+
+if [[ $output == *"can't cast"* ]]; then
+    DND_TESTS_SUCCEEDED=$((DND_TESTS_SUCCEEDED + 1))
+    echo "Test 22 Passed: Non-spellcaster cannot learn spell."
+else
+    DND_TESTS_FAILED=$((DND_TESTS_FAILED + 1))
+    echo "Test 22 Failed: Non-spellcaster learned spell."
+fi
+
+
+
+# Test 23: Can't prepare spell if you're not a spellcaster
+output=$(./dcg prepare-spell -name "Aragorn" -spell "fireball" 2>&1)
+
+if [[ $output == *"can't cast"* ]]; then
+    DND_TESTS_SUCCEEDED=$((DND_TESTS_SUCCEEDED + 1))
+    echo "Test 23 Passed: Non-spellcaster cannot prepare spell."
+else
+    DND_TESTS_FAILED=$((DND_TESTS_FAILED + 1))
+    echo "Test 23 Failed: Non-spellcaster prepared spell."
+fi
+
+
+
 # Clearning up the compiled binary
 echo ""
 echo "Tests completed. Succeeded: $DND_TESTS_SUCCEEDED. Failed: $DND_TESTS_FAILED"
+
+./dcg delete -name "Aragorn" >/dev/null 2>&1
+./dcg delete -name "Gandalf" >/dev/null 2>&1
+./dcg delete -name "Galadriel" >/dev/null 2>&1
 rm dcg

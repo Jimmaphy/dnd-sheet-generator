@@ -11,5 +11,213 @@
         "stealth",
         "survival"
     ],
-    "CasterType": "prepared"
+    "CasterType": "prepared",
+    "Spells": [
+        {"Name": "alarm", "Level": 1},
+        {"Name": "animal friendship", "Level": 1},
+        {"Name": "cure wounds", "Level": 1},
+        {"Name": "detect magic", "Level": 1},
+        {"Name": "detect poison and disease", "Level": 1},
+        {"Name": "ensnaring strike", "Level": 1},
+        {"Name": "fog cloud", "Level": 1},
+        {"Name": "goodberry", "Level": 1},
+        {"Name": "hail of thorns", "Level": 1},
+        {"Name": "hunter's mark", "Level": 1},
+        {"Name": "jump", "Level": 1},
+        {"Name": "longstrider", "Level": 1},
+        {"Name": "speak with animals", "Level": 1},
+        {"Name": "animal messenger", "Level": 2},
+        {"Name": "barkskin", "Level": 2},
+        {"Name": "beast sense", "Level": 2},
+        {"Name": "cordon of arrows", "Level": 2},
+        {"Name": "darkvision", "Level": 2},
+        {"Name": "find traps", "Level": 2},
+        {"Name": "lesser restoration", "Level": 2},
+        {"Name": "locate animals or plants", "Level": 2},
+        {"Name": "locate object", "Level": 2},
+        {"Name": "pass without trace", "Level": 2},
+        {"Name": "protection from poison", "Level": 2},
+        {"Name": "silence", "Level": 2},
+        {"Name": "spike growth", "Level": 2},
+        {"Name": "conjure animals", "Level": 3},
+        {"Name": "conjure barrage", "Level": 3},
+        {"Name": "daylight", "Level": 3},
+        {"Name": "lightning arrow", "Level": 3},
+        {"Name": "nondetection", "Level": 3},
+        {"Name": "plant growth", "Level": 3},
+        {"Name": "protection from energy", "Level": 3},
+        {"Name": "speak with plants", "Level": 3},
+        {"Name": "water breathing", "Level": 3},
+        {"Name": "water walk", "Level": 3},
+        {"Name": "wind wall", "Level": 3},
+        {"Name": "conjure woodland beings", "Level": 4},
+        {"Name": "freedom of movement", "Level": 4},
+        {"Name": "grasping vine", "Level": 4},
+        {"Name": "locate creature", "Level": 4},
+        {"Name": "stoneskin", "Level": 4},
+        {"Name": "commune with nature", "Level": 5},
+        {"Name": "conjure volley", "Level": 5},
+        {"Name": "swift quiver", "Level": 5},
+        {"Name": "tree stride", "Level": 5}
+    ],
+    "SpellLevels": [
+        {
+            "Level": 1,
+            "Slots": {}
+        },
+        {
+            "Level": 2,
+            "Slots": {
+                "1": 2
+            }
+        },
+        {
+            "Level": 3,
+            "Slots": {
+                "1": 3
+            }
+        },
+        {
+            "Level": 4,
+            "Slots": {
+                "1": 3
+            }
+        },
+        {
+            "Level": 5,
+            "Slots": {
+                "1": 4,
+                "2": 2
+            }
+        },
+        {
+            "Level": 6,
+            "Slots": {
+                "1": 4,
+                "2": 2
+            }
+        },
+        {
+            "Level": 7,
+            "Slots": {
+                "1": 4,
+                "2": 3
+            }
+        },
+        {
+            "Level": 8,
+            "Slots": {
+                "1": 4,
+                "2": 3
+            }
+        },
+        {
+            "Level": 9,
+            "Slots": {
+                "1": 4,
+                "2": 3,
+                "3": 2
+            }
+        },
+        {
+            "Level": 10,
+            "Slots": {
+                "1": 4,
+                "2": 3,
+                "3": 2
+            }
+        },
+        {
+            "Level": 11,
+            "Slots": {
+                "1": 4,
+                "2": 3,
+                "3": 3
+            }
+        },
+        {
+            "Level": 12,
+            "Slots": {
+                "1": 4,
+                "2": 3,
+                "3": 3
+            }
+        },
+        {
+            "Level": 13,
+            "Slots": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 1
+            }
+        },
+        {
+            "Level": 14,
+            "Slots": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 1
+            }
+        },
+        {
+            "Level": 15,
+            "Slots": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 2
+            }
+        },
+        {
+            "Level": 16,
+            "Slots": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 2
+            }
+        },
+        {
+            "Level": 17,
+            "Slots": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 1
+            }
+        },
+        {
+            "Level": 18,
+            "Slots": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 1
+            }
+        },
+        {
+            "Level": 19,
+            "Slots": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 2
+            }
+        },
+        {
+            "Level": 20,
+            "Slots": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 2
+            }
+        }
+    ]
 }

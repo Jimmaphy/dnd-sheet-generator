@@ -10,5 +10,243 @@
         "nature",
         "religion"
     ],
-    "CasterType": "pact"
+    "CasterType": "pact",
+    "Spells": [
+        {"Name": "blade ward", "Level": 0},
+        {"Name": "chill touch", "Level": 0},
+        {"Name": "eldritch blast", "Level": 0},
+        {"Name": "friends", "Level": 0},
+        {"Name": "mage hand", "Level": 0},
+        {"Name": "minor illusion", "Level": 0},
+        {"Name": "poison spray", "Level": 0},
+        {"Name": "prestidigitation", "Level": 0},
+        {"Name": "true strike", "Level": 0},
+        {"Name": "armor of agathys", "Level": 1},
+        {"Name": "arms of hadar", "Level": 1},
+        {"Name": "charm person", "Level": 1},
+        {"Name": "comprehend languages", "Level": 1},
+        {"Name": "expeditious retreat", "Level": 1},
+        {"Name": "hellish rebuke", "Level": 1},
+        {"Name": "hex", "Level": 1},
+        {"Name": "illusory script", "Level": 1},
+        {"Name": "protection from evil and good", "Level": 1},
+        {"Name": "unseen servant", "Level": 1},
+        {"Name": "witch bolt", "Level": 1},
+        {"Name": "cloud of daggers", "Level": 2},
+        {"Name": "crown of madness", "Level": 2},
+        {"Name": "darkness", "Level": 2},
+        {"Name": "enthrall", "Level": 2},
+        {"Name": "hold person", "Level": 2},
+        {"Name": "invisibility", "Level": 2},
+        {"Name": "mirror image", "Level": 2},
+        {"Name": "misty step", "Level": 2},
+        {"Name": "ray of enfeeblement", "Level": 2},
+        {"Name": "shatter", "Level": 2},
+        {"Name": "spider climb", "Level": 2},
+        {"Name": "suggestion", "Level": 2},
+        {"Name": "counterspell", "Level": 3},
+        {"Name": "dispel magic", "Level": 3},
+        {"Name": "fear", "Level": 3},
+        {"Name": "fly", "Level": 3},
+        {"Name": "gaseous form", "Level": 3},
+        {"Name": "hunger of hadar", "Level": 3},
+        {"Name": "hypnotic pattern", "Level": 3},
+        {"Name": "magic circle", "Level": 3},
+        {"Name": "major image", "Level": 3},
+        {"Name": "remove curse", "Level": 3},
+        {"Name": "tongues", "Level": 3},
+        {"Name": "vampiric touch", "Level": 3},
+        {"Name": "banishment", "Level": 4},
+        {"Name": "blight", "Level": 4},
+        {"Name": "dimension door", "Level": 4},
+        {"Name": "hallucinatory terrain", "Level": 4},
+        {"Name": "contact other plane", "Level": 5},
+        {"Name": "dream", "Level": 5},
+        {"Name": "hold monster", "Level": 5},
+        {"Name": "scrying", "Level": 5},
+        {"Name": "arcane gate", "Level": 6},
+        {"Name": "circle of death", "Level": 6},
+        {"Name": "conjure fey", "Level": 6},
+        {"Name": "create undead", "Level": 6},
+        {"Name": "eyebite", "Level": 6},
+        {"Name": "flesh to stone", "Level": 6},
+        {"Name": "mass suggestion", "Level": 6},
+        {"Name": "true seeing", "Level": 6},
+        {"Name": "etherealness", "Level": 7},
+        {"Name": "finger of death", "Level": 7},
+        {"Name": "forcecage", "Level": 7},
+        {"Name": "plane shift", "Level": 7},
+        {"Name": "demiplane", "Level": 8},
+        {"Name": "dominate monster", "Level": 8},
+        {"Name": "feeblemind", "Level": 8},
+        {"Name": "glibness", "Level": 8},
+        {"Name": "power word stun", "Level": 8},
+        {"Name": "astral projection", "Level": 9},
+        {"Name": "foresight", "Level": 9},
+        {"Name": "imprisonment", "Level": 9},
+        {"Name": "power word kill", "Level": 9},
+        {"Name": "true polymorph", "Level": 9}
+    ],
+    "SpellLevels": [
+        {
+            "Level": 1,
+            "SpellsKnown": 2,
+            "Slots": {
+                "0": 2,
+                "1": 1
+            }
+        },
+        {
+            "Level": 2,
+            "SpellsKnown": 3,
+            "Slots": {
+                "0": 2,
+                "1": 2
+            }
+        },
+        {
+            "Level": 3,
+            "SpellsKnown": 4,
+            "Slots": {
+                "0": 2,
+                "2": 2
+            }
+        },
+        {
+            "Level": 4,
+            "SpellsKnown": 5,
+            "Slots": {
+                "0": 3,
+                "2": 2
+            }
+        },
+        {
+            "Level": 5,
+            "SpellsKnown": 6,
+            "Slots": {
+                "0": 3,
+                "3": 2
+            }
+        },
+        {
+            "Level": 6,
+            "SpellsKnown": 7,
+            "Slots": {
+                "0": 3,
+                "3": 2
+            }
+        },
+        {
+            "Level": 7,
+            "SpellsKnown": 8,
+            "Slots": {
+                "0": 3,
+                "4": 2
+            }
+        },
+        {
+            "Level": 8,
+            "SpellsKnown": 9,
+            "Slots": {
+                "0": 3,
+                "4": 2
+            }
+        },
+        {
+            "Level": 9,
+            "SpellsKnown": 10,
+            "Slots": {
+                "0": 3,
+                "5": 2
+            }
+        },
+        {
+            "Level": 10,
+            "SpellsKnown": 10,
+            "Slots": {
+                "0": 4,
+                "5": 2
+            }
+        },
+        {
+            "Level": 11,
+            "SpellsKnown": 11,
+            "Slots": {
+                "0": 4,
+                "5": 3
+            }
+        },
+        {
+            "Level": 12,
+            "SpellsKnown": 11,
+            "Slots": {
+                "0": 4,
+                "5": 3
+            }
+        },
+        {
+            "Level": 13,
+            "SpellsKnown": 12,
+            "Slots": {
+                "0": 4,
+                "5": 3
+            }
+        },
+        {
+            "Level": 14,
+            "SpellsKnown": 12,
+            "Slots": {
+                "0": 4,
+                "5": 3
+            }
+        },
+        {
+            "Level": 15,
+            "SpellsKnown": 13,
+            "Slots": {
+                "0": 4,
+                "5": 3
+            }
+        },
+        {
+            "Level": 16,
+            "SpellsKnown": 13,
+            "Slots": {
+                "0": 4,
+                "5": 3
+            }
+        },
+        {
+            "Level": 17,
+            "SpellsKnown": 14,
+            "Slots": {
+                "0": 4,
+                "5": 4
+            }
+        },
+        {
+            "Level": 18,
+            "SpellsKnown": 14,
+            "Slots": {
+                "0": 4,
+                "5": 4
+            }
+        },
+        {
+            "Level": 19,
+            "SpellsKnown": 15,
+            "Slots": {
+                "0": 4,
+                "5": 4
+            }
+        },
+        {
+            "Level": 20,
+            "SpellsKnown": 15,
+            "Slots": {
+                "0": 4,
+                "5": 4
+            }
+        }
+    ]
 }

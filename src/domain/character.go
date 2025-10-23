@@ -19,34 +19,17 @@ type Character struct {
 	OffHand     *Weapon
 	Armor       *Armor
 	Shield      *Shield
+	Spells	  	[]*Spell
 }
 
 // NewCharacter creates a new Character instance with the given name.
+// An empty spell list is initialized.
 func NewCharacter(name string, level int) *Character {
 	return &Character{
 		Name:  name,
 		Level: level,
+		Spells: []*Spell{},
 	}
-}
-
-// The SetRace method assigns a race to the character.
-func (character *Character) SetRace(race *Race) {
-	character.Race = race
-}
-
-// The SetClass method assigns a class to the character.
-func (character *Character) SetClass(class *Class) {
-	character.Class = class
-}
-
-// The SetBackground method assigns a background to the character.
-func (character *Character) SetBackground(background *Background) {
-	character.Background = background
-}
-
-// The SetSkillSet method assigns a skill set to the character.
-func (character *Character) SetSkillSet(skillSet *SkillSet) {
-	character.BaseSkills = skillSet
 }
 
 // The equip method equips an item to the character.
@@ -66,6 +49,18 @@ func (character *Character) EquipWeapon(weapon *Weapon, mainHand bool) error {
 		character.OffHand = weapon
 	}
 
+	return nil
+}
+
+// AddSpell adds a spell to the character's spell list.
+// First, a check is performed to ensure the spell can be learned by the class.
+func (character *Character) AddSpell(spellName string) error {
+	spell, err := character.Class.GetSpell(spellName, character.Level)
+	if err != nil {
+		return err
+	}
+
+	character.Spells = append(character.Spells, spell)
 	return nil
 }
 

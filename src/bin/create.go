@@ -93,10 +93,10 @@ func (command *CreateCommand) Execute() error {
 func (command *CreateCommand) assignAllProperties(character *domain.Character, race *domain.Race, class *domain.Class, background *domain.Background) {
 	skills := domain.NewSkillSet(command.str, command.dex, command.con, command.intl, command.wis, command.cha)
 
-	character.SetRace(race)
-	character.SetClass(class)
-	character.SetBackground(background)
-	character.SetSkillSet(skills)
+	character.Race = race
+	character.Class = class
+	character.Background = background
+	character.BaseSkills = skills
 
 	character.CalculateTotalSkills()
 }
