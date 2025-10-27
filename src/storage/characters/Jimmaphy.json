@@ -1,278 +1,42 @@
 {
   "Name": "Jimmaphy",
   "Race": {
-    "Name": "rock gnome",
+    "Name": "human",
     "SkillModifiers": {
-      "Strength": 0,
-      "Dexterity": 0,
-      "Constitution": 1,
-      "Intelligence": 2,
-      "Wisdom": 0,
-      "Charisma": 0
+      "Strength": {
+        "Value": 1
+      },
+      "Dexterity": {
+        "Value": 1
+      },
+      "Constitution": {
+        "Value": 1
+      },
+      "Intelligence": {
+        "Value": 1
+      },
+      "Wisdom": {
+        "Value": 1
+      },
+      "Charisma": {
+        "Value": 1
+      }
     }
   },
   "Class": {
-    "Name": "wizard",
+    "Name": "barbarian",
     "SkillCount": 2,
     "Skills": [
-      "arcana",
-      "history",
-      "insight",
-      "investigation",
-      "medicine",
-      "religion"
+      "animal handling",
+      "athletics",
+      "intimidation",
+      "nature",
+      "perception",
+      "survival"
     ],
-    "CasterType": "prepared",
-    "SpellLevels": [
-      {
-        "Level": 1,
-        "SpellsKnown": 0,
-        "Slots": {
-          "0": 3,
-          "1": 2
-        }
-      },
-      {
-        "Level": 2,
-        "SpellsKnown": 0,
-        "Slots": {
-          "0": 3,
-          "1": 3
-        }
-      },
-      {
-        "Level": 3,
-        "SpellsKnown": 0,
-        "Slots": {
-          "0": 3,
-          "1": 4,
-          "2": 2
-        }
-      },
-      {
-        "Level": 4,
-        "SpellsKnown": 0,
-        "Slots": {
-          "0": 4,
-          "1": 4,
-          "2": 3
-        }
-      },
-      {
-        "Level": 5,
-        "SpellsKnown": 0,
-        "Slots": {
-          "0": 4,
-          "1": 4,
-          "2": 3,
-          "3": 2
-        }
-      },
-      {
-        "Level": 6,
-        "SpellsKnown": 0,
-        "Slots": {
-          "0": 4,
-          "1": 4,
-          "2": 3,
-          "3": 3
-        }
-      },
-      {
-        "Level": 7,
-        "SpellsKnown": 0,
-        "Slots": {
-          "0": 4,
-          "1": 4,
-          "2": 3,
-          "3": 3,
-          "4": 1
-        }
-      },
-      {
-        "Level": 8,
-        "SpellsKnown": 0,
-        "Slots": {
-          "0": 4,
-          "1": 4,
-          "2": 3,
-          "3": 3,
-          "4": 2
-        }
-      },
-      {
-        "Level": 9,
-        "SpellsKnown": 0,
-        "Slots": {
-          "0": 4,
-          "1": 4,
-          "2": 3,
-          "3": 3,
-          "4": 3,
-          "5": 1
-        }
-      },
-      {
-        "Level": 10,
-        "SpellsKnown": 0,
-        "Slots": {
-          "0": 5,
-          "1": 4,
-          "2": 3,
-          "3": 3,
-          "4": 3,
-          "5": 2
-        }
-      },
-      {
-        "Level": 11,
-        "SpellsKnown": 0,
-        "Slots": {
-          "0": 5,
-          "1": 4,
-          "2": 3,
-          "3": 3,
-          "4": 3,
-          "5": 2,
-          "6": 1
-        }
-      },
-      {
-        "Level": 12,
-        "SpellsKnown": 0,
-        "Slots": {
-          "0": 5,
-          "1": 4,
-          "2": 3,
-          "3": 3,
-          "4": 3,
-          "5": 2,
-          "6": 1
-        }
-      },
-      {
-        "Level": 13,
-        "SpellsKnown": 0,
-        "Slots": {
-          "0": 5,
-          "1": 4,
-          "2": 3,
-          "3": 3,
-          "4": 3,
-          "5": 2,
-          "6": 1,
-          "7": 1
-        }
-      },
-      {
-        "Level": 14,
-        "SpellsKnown": 0,
-        "Slots": {
-          "0": 5,
-          "1": 4,
-          "2": 3,
-          "3": 3,
-          "4": 3,
-          "5": 2,
-          "6": 1,
-          "7": 1
-        }
-      },
-      {
-        "Level": 15,
-        "SpellsKnown": 0,
-        "Slots": {
-          "0": 5,
-          "1": 4,
-          "2": 3,
-          "3": 3,
-          "4": 3,
-          "5": 2,
-          "6": 1,
-          "7": 1,
-          "8": 1
-        }
-      },
-      {
-        "Level": 16,
-        "SpellsKnown": 0,
-        "Slots": {
-          "0": 5,
-          "1": 4,
-          "2": 3,
-          "3": 3,
-          "4": 3,
-          "5": 2,
-          "6": 1,
-          "7": 1,
-          "8": 1
-        }
-      },
-      {
-        "Level": 17,
-        "SpellsKnown": 0,
-        "Slots": {
-          "0": 5,
-          "1": 4,
-          "2": 3,
-          "3": 3,
-          "4": 3,
-          "5": 2,
-          "6": 1,
-          "7": 1,
-          "8": 1,
-          "9": 1
-        }
-      },
-      {
-        "Level": 18,
-        "SpellsKnown": 0,
-        "Slots": {
-          "0": 5,
-          "1": 4,
-          "2": 3,
-          "3": 3,
-          "4": 3,
-          "5": 3,
-          "6": 1,
-          "7": 1,
-          "8": 1,
-          "9": 1
-        }
-      },
-      {
-        "Level": 19,
-        "SpellsKnown": 0,
-        "Slots": {
-          "0": 5,
-          "1": 4,
-          "2": 3,
-          "3": 3,
-          "4": 3,
-          "5": 3,
-          "6": 2,
-          "7": 1,
-          "8": 1,
-          "9": 1
-        }
-      },
-      {
-        "Level": 20,
-        "SpellsKnown": 0,
-        "Slots": {
-          "0": 5,
-          "1": 4,
-          "2": 3,
-          "3": 3,
-          "4": 3,
-          "5": 3,
-          "6": 2,
-          "7": 2,
-          "8": 1,
-          "9": 1
-        }
-      }
-    ]
+    "CasterType": "none",
+    "SpellLevels": null,
+    "Spells": null
   },
   "Background": {
     "Name": "acolyte",
@@ -281,25 +45,50 @@
       "religion"
     ]
   },
-  "Level": 16,
+  "Level": 1,
   "BaseSkills": {
-    "Strength": 10,
-    "Dexterity": 10,
-    "Constitution": 10,
-    "Intelligence": 10,
-    "Wisdom": 10,
-    "Charisma": 10
+    "Strength": {
+      "Value": 10
+    },
+    "Dexterity": {
+      "Value": 10
+    },
+    "Constitution": {
+      "Value": 10
+    },
+    "Intelligence": {
+      "Value": 10
+    },
+    "Wisdom": {
+      "Value": 10
+    },
+    "Charisma": {
+      "Value": 10
+    }
   },
   "TotalSkills": {
-    "Strength": 10,
-    "Dexterity": 10,
-    "Constitution": 11,
-    "Intelligence": 12,
-    "Wisdom": 10,
-    "Charisma": 10
+    "Strength": {
+      "Value": 11
+    },
+    "Dexterity": {
+      "Value": 11
+    },
+    "Constitution": {
+      "Value": 11
+    },
+    "Intelligence": {
+      "Value": 11
+    },
+    "Wisdom": {
+      "Value": 11
+    },
+    "Charisma": {
+      "Value": 11
+    }
   },
   "MainHand": null,
   "OffHand": null,
   "Armor": null,
-  "Shield": null
+  "Shield": null,
+  "Spells": []
 }

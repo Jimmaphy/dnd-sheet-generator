@@ -1,11 +1,11 @@
 {
     "Name": "tiefling",
     "SkillModifiers": {
-        "Strength": 0,
-        "Dexterity": 0,
-        "Constitution": 0,
-        "Intelligence": 1,
-        "Wisdom": 0,
-        "Charisma": 2
+        "Strength": { "Value": 0 },
+        "Dexterity": { "Value": 0 },
+        "Constitution": { "Value": 0 },
+        "Intelligence": { "Value": 1 },
+        "Wisdom": { "Value": 0 },
+        "Charisma": { "Value": 2 }
     }
 }

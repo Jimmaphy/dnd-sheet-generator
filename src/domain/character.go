@@ -97,6 +97,19 @@ func (character *Character) GetProficiencyBonus() string {
 	return fmt.Sprintf("+%d", bonus)
 }
 
+// GetInitiativeBonus returns the initiative bonus of the character.
+// This is equal to the dexterity modifier.
+func (character *Character) GetInitiativeBonus() int {
+	return character.TotalSkills.Dexterity.GetModifier()
+}
+
+// GetPassivePerception calculates the passive perception of the character.
+// This is equal to 10 + wisdom modifier
+func (character *Character) GetPassivePerception() int {
+	wisdomModifier := character.TotalSkills.Wisdom.GetModifier()
+	return 10 + wisdomModifier
+}
+
 // GetSkillProficiencyString returns the skill proficiency string.
 // The skills are represented as a comma-separated list.
 // First, the skills are taken from the character's class, based on the skill count.
@@ -117,14 +130,11 @@ func (character *Character) GetSkillProficiencyString() (string, error) {
 // GetArmorClass calculates the total armor class of the character.
 // It considers the armor, shield, and dexterity modifier.
 func (character *Character) GetArmorClass() int {
-	dexModValue := 0
+	dexterityModifier := character.TotalSkills.Dexterity.GetModifier()
 	armorClass := 10
 
-	dexModifier := character.TotalSkills.GetDexterityModifierString()
-	fmt.Sscanf(dexModifier, "+%d", &dexModValue)
-
-	if character.Armor == nil {
-		armorClass = character.Armor.GetArmorClass(dexModValue)
+	if character.Armor != nil {
+		armorClass = character.Armor.GetArmorClass(dexterityModifier)
 	}
 
 	if character.Shield != nil {

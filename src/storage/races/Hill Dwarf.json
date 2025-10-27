@@ -1,11 +1,11 @@
 {
     "Name": "hill dwarf",
     "SkillModifiers": {
-        "Strength": 0,
-        "Dexterity": 0,
-        "Constitution": 2,
-        "Intelligence": 0,
-        "Wisdom": 1,
-        "Charisma": 0
+        "Strength": { "Value": 0 },
+        "Dexterity": { "Value": 0 },
+        "Constitution": { "Value": 2 },
+        "Intelligence": { "Value": 0 },
+        "Wisdom": { "Value": 1 },
+        "Charisma": { "Value": 0 }
     }
 }

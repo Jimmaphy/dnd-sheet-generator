@@ -13,7 +13,7 @@ type Class struct {
 	Skills      []string
 	CasterType  string
 	SpellLevels []SpellLevel
-	Spells 		[]*Spell
+	Spells      []*Spell
 }
 
 // Create a new class based on the provided name.
@@ -40,6 +40,12 @@ func (class *Class) GetSpell(spellName string, level int) (*Spell, error) {
 	}
 
 	return nil, errors.New("the spell is not available for this class")
+}
+
+// CanCastsSpells checks if the class can cast spells.
+// The function returns false if the CasterType is "none", true otherwise.
+func (class *Class) CanCastSpells() bool {
+	return class.CasterType != "none"
 }
 
 // GetSpellSlots returns the spell slots available for a given spell level.
@@ -73,7 +79,7 @@ func (class *Class) SpellSlotsString(level int) string {
 	for _, spellLevelData := range class.SpellLevels {
 		if spellLevelData.Level == level {
 			for slotLevel, slots := range spellLevelData.Slots {
-				slotsStrings = append(slotsStrings, "  Level " + slotLevel + ": " + strconv.Itoa(slots))
+				slotsStrings = append(slotsStrings, "  Level "+slotLevel+": "+strconv.Itoa(slots))
 			}
 		}
 	}

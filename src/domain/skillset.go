@@ -1,82 +1,33 @@
 package domain
 
-import (
-	"fmt"
-	"math"
-)
-
 type SkillSet struct {
-	Strength     int
-	Dexterity    int
-	Constitution int
-	Intelligence int
-	Wisdom       int
-	Charisma     int
+	Strength     *Skill
+	Dexterity    *Skill
+	Constitution *Skill
+	Intelligence *Skill
+	Wisdom       *Skill
+	Charisma     *Skill
 }
 
 // NewSkillSet creates a new SkillSet instance with the given values.
+// A new instance of Skill is created for each attribute.
 func NewSkillSet(str, dex, con, intl, wis, cha int) *SkillSet {
 	return &SkillSet{
-		Strength:     str,
-		Dexterity:    dex,
-		Constitution: con,
-		Intelligence: intl,
-		Wisdom:       wis,
-		Charisma:     cha,
+		Strength:     NewSkill(str),
+		Dexterity:    NewSkill(dex),
+		Constitution: NewSkill(con),
+		Intelligence: NewSkill(intl),
+		Wisdom:       NewSkill(wis),
+		Charisma:     NewSkill(cha),
 	}
 }
 
-// Add the values of another SkillSet to this SkillSet.
+// Add the values of another SkillSet to the current SkillSet.
 func (set *SkillSet) Add(other *SkillSet) {
-	set.Strength += other.Strength
-	set.Dexterity += other.Dexterity
-	set.Constitution += other.Constitution
-	set.Intelligence += other.Intelligence
-	set.Wisdom += other.Wisdom
-	set.Charisma += other.Charisma
-}
-
-// Internal function for formatting modifier strings.
-func getModifierString(modifier int) string {
-	if modifier >= 0 {
-		return fmt.Sprintf("+%d", modifier)
-	}
-
-	return fmt.Sprintf("%d", modifier)
-}
-
-// GetStrengthModifierString returns the strength modifier as a string.
-func (set *SkillSet) GetStrengthModifierString() string {
-	modifier := int(math.Floor(float64(set.Strength-10) / 2))
-	return getModifierString(modifier)
-}
-
-// GetDexterityModifierString returns the dexterity modifier as a string.
-func (set *SkillSet) GetDexterityModifierString() string {
-	modifier := int(math.Floor(float64(set.Dexterity-10) / 2))
-	return getModifierString(modifier)
-}
-
-// GetConstitutionModifierString returns the constitution modifier as a string.
-func (set *SkillSet) GetConstitutionModifierString() string {
-	modifier := int(math.Floor(float64(set.Constitution-10) / 2))
-	return getModifierString(modifier)
-}
-
-// GetIntelligenceModifierString returns the intelligence modifier as a string.
-func (set *SkillSet) GetIntelligenceModifierString() string {
-	modifier := int(math.Floor(float64(set.Intelligence-10) / 2))
-	return getModifierString(modifier)
-}
-
-// GetWisdomModifierString returns the wisdom modifier as a string.
-func (set *SkillSet) GetWisdomModifierString() string {
-	modifier := int(math.Floor(float64(set.Wisdom-10) / 2))
-	return getModifierString(modifier)
-}
-
-// GetCharismaModifierString returns the charisma modifier as a string.
-func (set *SkillSet) GetCharismaModifierString() string {
-	modifier := int(math.Floor(float64(set.Charisma-10) / 2))
-	return getModifierString(modifier)
+	set.Strength.Value += other.Strength.Value
+	set.Dexterity.Value += other.Dexterity.Value
+	set.Constitution.Value += other.Constitution.Value
+	set.Intelligence.Value += other.Intelligence.Value
+	set.Wisdom.Value += other.Wisdom.Value
+	set.Charisma.Value += other.Charisma.Value
 }

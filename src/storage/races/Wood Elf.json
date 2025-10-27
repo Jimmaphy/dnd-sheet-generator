@@ -1,11 +1,11 @@
 {
     "Name": "wood elf",
     "SkillModifiers": {
-        "Strength": 1,
-        "Dexterity": 2,
-        "Constitution": 0,
-        "Intelligence": 0,
-        "Wisdom": 0,
-        "Charisma": 0
+        "Strength": { "Value": 1 },
+        "Dexterity": { "Value": 2 },
+        "Constitution": { "Value": 0 },
+        "Intelligence": { "Value": 0 },
+        "Wisdom": { "Value": 0 },
+        "Charisma": { "Value": 0 }
     }
 }

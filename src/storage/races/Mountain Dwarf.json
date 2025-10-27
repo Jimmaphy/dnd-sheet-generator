@@ -1,11 +1,11 @@
 {
     "Name": "mountain dwarf",
     "SkillModifiers": {
-        "Strength": 2,
-        "Dexterity": 0,
-        "Constitution": 2,
-        "Intelligence": 0,
-        "Wisdom": 0,
-        "Charisma": 0
+        "Strength": { "Value": 2 },
+        "Dexterity": { "Value": 0 },
+        "Constitution": { "Value": 2 },
+        "Intelligence": { "Value": 0 },
+        "Wisdom": { "Value": 0 },
+        "Charisma": { "Value": 0 }
     }
 }
