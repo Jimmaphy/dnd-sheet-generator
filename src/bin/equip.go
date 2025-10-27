@@ -106,9 +106,17 @@ func (command *EquipCommand) equipWeapon(character *domain.Character) error {
 // Equip a piece of armor to the character.
 // After equipping, the character is saved back to the repository.
 func (command *EquipCommand) equipArmor(character *domain.Character) error {
-	armor := domain.NewArmor(command.armor)
+	armorRepository := repository.NewArmorJSONRepository()
+	armor, err := armorRepository.Get(command.armor)
+	if err != nil {
+		return errors.New("armor \"" + command.armor + "\" not found")
+	}
 
-	err := character.EquipArmor(armor)
+	if err != nil {
+		return err
+	}
+
+	err = character.EquipArmor(armor)
 	if err != nil {
 		return err
 	}

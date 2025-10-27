@@ -3,6 +3,7 @@ package domain
 type Background struct {
 	Name   string
 	Skills []string
+	a int
 }
 
 // Create a new background based on the provided name.

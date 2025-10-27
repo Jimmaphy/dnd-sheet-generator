@@ -1,0 +1,7 @@
+{
+    "Name": "plate armor",
+    "Type": "heavy armor",
+    "ArmorClass": 18,
+    "DexterityModifier": false,
+    "ModifierLimit": null
+}

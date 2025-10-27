@@ -1,0 +1,7 @@
+{
+    "Name": "studded leather armor",
+    "Type": "light armor",
+    "ArmorClass": 12,
+    "DexterityModifier": true,
+    "ModifierLimit": null
+}

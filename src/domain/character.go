@@ -19,15 +19,15 @@ type Character struct {
 	OffHand     *Weapon
 	Armor       *Armor
 	Shield      *Shield
-	Spells	  	[]*Spell
+	Spells      []*Spell
 }
 
 // NewCharacter creates a new Character instance with the given name.
 // An empty spell list is initialized.
 func NewCharacter(name string, level int) *Character {
 	return &Character{
-		Name:  name,
-		Level: level,
+		Name:   name,
+		Level:  level,
 		Spells: []*Spell{},
 	}
 }
@@ -112,4 +112,24 @@ func (character *Character) GetSkillProficiencyString() (string, error) {
 	proficiencies = append(proficiencies, character.Background.Skills[:2]...)
 
 	return strings.Join(proficiencies, ", "), nil
+}
+
+// GetArmorClass calculates the total armor class of the character.
+// It considers the armor, shield, and dexterity modifier.
+func (character *Character) GetArmorClass() int {
+	dexModValue := 0
+	armorClass := 10
+
+	dexModifier := character.TotalSkills.GetDexterityModifierString()
+	fmt.Sscanf(dexModifier, "+%d", &dexModValue)
+
+	if character.Armor == nil {
+		armorClass = character.Armor.GetArmorClass(dexModValue)
+	}
+
+	if character.Shield != nil {
+		armorClass += character.Shield.GetArmorClassAddition()
+	}
+
+	return armorClass
 }

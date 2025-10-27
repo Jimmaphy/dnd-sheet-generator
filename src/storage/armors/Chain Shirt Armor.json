@@ -1,0 +1,7 @@
+{
+    "Name": "chain shirt armor",
+    "Type": "medium armor",
+    "ArmorClass": 13,
+    "DexterityModifier": true,
+    "ModifierLimit": 2
+}

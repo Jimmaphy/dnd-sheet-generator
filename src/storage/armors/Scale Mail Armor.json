@@ -1,0 +1,7 @@
+{
+    "Name": "scale mail armor",
+    "Type": "medium armor",
+    "Armor Class": 14,
+    "Dexterity Modifier": true,
+    "Modifier Limit": 2
+}

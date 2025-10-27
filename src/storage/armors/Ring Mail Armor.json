@@ -1,0 +1,7 @@
+{
+    "Name": "ring mail armor",
+    "Type": "heavy armor",
+    "ArmorClass": 14,
+    "DexterityModifier": false,
+    "ModifierLimit": null
+}
