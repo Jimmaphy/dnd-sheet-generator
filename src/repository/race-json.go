@@ -2,7 +2,7 @@ package repository
 
 import (
 	"github.com/jimmaphy/dnd-sheet-generator/domain"
-	"github.com/jimmaphy/dnd-sheet-generator/services"
+	"github.com/jimmaphy/dnd-sheet-generator/infrastructure"
 )
 
 type RaceJSONRepository struct {
@@ -20,7 +20,7 @@ func NewRaceJSONRepository() *RaceJSONRepository {
 // Get retrieves a race from the repository by name
 // It returns the race if found, or an error if not found
 func (repository *RaceJSONRepository) Get(name string) (*domain.Race, error) {
-	jsonService, err := services.NewJSONService(repository.folder)
+	jsonService, err := infrastructure.NewJSONService(repository.folder)
 	if err != nil {
 		return nil, err
 	}

@@ -1,0 +1,7 @@
+{
+    "Name": "Heavy Crossbow",
+    "Category": "Martial",
+    "Type": "Ranged",
+    "DamageDice": "1d10",
+    "DamageType": "Piercing"
+}

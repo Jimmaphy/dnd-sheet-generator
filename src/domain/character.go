@@ -91,10 +91,14 @@ func (character *Character) CalculateTotalSkills() error {
 }
 
 // GetProficiencyBonus calculates the proficiency bonus based on the character's level.
+func (character *Character) GetProficiencyBonus() int {
+	return 1 + int(math.Ceil(float64(character.Level)/4))
+}
+
+// GetProficiencyBonus calculates the proficiency bonus based on the character's level.
 // The returned string includes a '+' sign.
-func (character *Character) GetProficiencyBonus() string {
-	bonus := 1 + int(math.Ceil(float64(character.Level)/4))
-	return fmt.Sprintf("+%d", bonus)
+func (character *Character) GetProficiencyBonusString() string {
+	return fmt.Sprintf("+%d", character.GetProficiencyBonus())
 }
 
 // GetInitiativeBonus returns the initiative bonus of the character.
@@ -108,6 +112,37 @@ func (character *Character) GetInitiativeBonus() int {
 func (character *Character) GetPassivePerception() int {
 	wisdomModifier := character.TotalSkills.Wisdom.GetModifier()
 	return 10 + wisdomModifier
+}
+
+// GetSpellSaveDC calculates the spell save DC for the character.
+// The formula is 8 + proficiency bonus + spellcasting ability modifier.
+// If the character has no class, 0 is returned.
+func (character *Character) GetSpellSaveDC() int {
+	if character.Class == nil {
+		return 0
+	}
+
+	castAbility := character.Class.CastAbility
+	castModifier := character.TotalSkills.GetModifierByName(castAbility)
+	spellSaveDC := 8 + character.GetProficiencyBonus() + castModifier
+
+	return spellSaveDC
+}
+
+// GetSpellAttackBonusString calculates the spell attack bonus for the character.
+// The formula is proficiency bonus + spellcasting ability modifier.
+// The returned string includes a '+' sign.
+// If the character has no class, an empty string is returned.
+func (character *Character) GetSpellAttackBonusString() string {
+	if character.Class == nil {
+		return ""
+	}
+
+	castAbility := character.Class.CastAbility
+	castModifier := character.TotalSkills.GetModifierByName(castAbility)
+	spellAttackBonus := character.GetProficiencyBonus() + castModifier
+
+	return fmt.Sprintf("+%d", spellAttackBonus)
 }
 
 // GetSkillProficiencyString returns the skill proficiency string.
@@ -131,10 +166,17 @@ func (character *Character) GetSkillProficiencyString() (string, error) {
 // It considers the armor, shield, and dexterity modifier.
 func (character *Character) GetArmorClass() int {
 	dexterityModifier := character.TotalSkills.Dexterity.GetModifier()
+	unarmoredModifiers := character.Class.UnarmoredDefenseModifiers
 	armorClass := 10
 
 	if character.Armor != nil {
 		armorClass = character.Armor.GetArmorClass(dexterityModifier)
+	} else if len(unarmoredModifiers) > 0 {
+		for _, modifier := range unarmoredModifiers {
+			armorClass += character.TotalSkills.GetModifierByName(modifier)
+		}
+	} else {
+		armorClass += dexterityModifier
 	}
 
 	if character.Shield != nil {

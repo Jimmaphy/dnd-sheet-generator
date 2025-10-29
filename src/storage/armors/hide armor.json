@@ -1,0 +1,7 @@
+{
+  "Name": "hide armor",
+  "Type": "medium armor",
+  "ArmorClass": 12,
+  "DexterityModifier": true,
+  "ModifierLimit": 2
+}

@@ -11,6 +11,8 @@
         "religion"
     ],
     "CasterType": "pact",
+    "CastAbility": "charisma",
+    "SpellSaveBase": 8,
     "Spells": [
         {"Name": "blade ward", "Level": 0},
         {"Name": "chill touch", "Level": 0},

@@ -86,10 +86,14 @@ func (command *EquipCommand) Execute() error {
 // This is determined by checking if the slot contains the word "main".
 // After equipping, the character is saved back to the repository.
 func (command *EquipCommand) equipWeapon(character *domain.Character) error {
-	item := domain.NewWeapon(command.weapon)
-	mainHand := strings.Contains(strings.ToLower(command.slot), "main")
+	weaponRepository := repository.NewWeaponJSONRepository()
+	weapon, err := weaponRepository.Get(command.weapon)
+	if err != nil {
+		return errors.New("weapon \"" + command.weapon + "\" not found")
+	}
 
-	err := character.EquipWeapon(item, mainHand)
+	mainHand := strings.Contains(strings.ToLower(command.slot), "main")
+	err = character.EquipWeapon(weapon, mainHand)
 	if err != nil {
 		return err
 	}
@@ -110,10 +114,6 @@ func (command *EquipCommand) equipArmor(character *domain.Character) error {
 	armor, err := armorRepository.Get(command.armor)
 	if err != nil {
 		return errors.New("armor \"" + command.armor + "\" not found")
-	}
-
-	if err != nil {
-		return err
 	}
 
 	err = character.EquipArmor(armor)

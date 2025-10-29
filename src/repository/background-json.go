@@ -2,7 +2,7 @@ package repository
 
 import (
 	"github.com/jimmaphy/dnd-sheet-generator/domain"
-	"github.com/jimmaphy/dnd-sheet-generator/services"
+	"github.com/jimmaphy/dnd-sheet-generator/infrastructure"
 )
 
 type BackgroundJSONRepository struct {
@@ -20,7 +20,7 @@ func NewBackgroundJSONRepository() *BackgroundJSONRepository {
 // Get retrieves a background from the repository by name
 // It returns the background if found, or an error if not found
 func (repository *BackgroundJSONRepository) Get(name string) (*domain.Background, error) {
-	jsonService, err := services.NewJSONService(repository.folder)
+	jsonService, err := infrastructure.NewJSONService(repository.folder)
 	if err != nil {
 		return nil, err
 	}

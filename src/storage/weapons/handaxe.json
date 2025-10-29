@@ -1,0 +1,7 @@
+{
+  "Name": "handaxe",
+  "Category": "simple",
+  "Type": "melee",
+  "DamageDice": "1d6",
+  "DamageType": "slashing"
+}

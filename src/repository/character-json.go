@@ -2,7 +2,7 @@ package repository
 
 import (
 	"github.com/jimmaphy/dnd-sheet-generator/domain"
-	"github.com/jimmaphy/dnd-sheet-generator/services"
+	"github.com/jimmaphy/dnd-sheet-generator/infrastructure"
 )
 
 type CharacterJSONRepository struct {
@@ -21,7 +21,7 @@ func NewCharacterJSONRepository() *CharacterJSONRepository {
 // The character will be saved as a JSON file named after the character's name
 // The character's name should be unique to avoid overwriting existing files
 func (repository *CharacterJSONRepository) Add(character *domain.Character) error {
-	jsonService, err := services.NewJSONService(repository.folder)
+	jsonService, err := infrastructure.NewJSONService(repository.folder)
 	if err != nil {
 		return err
 	}
@@ -31,7 +31,7 @@ func (repository *CharacterJSONRepository) Add(character *domain.Character) erro
 
 // List retrieves the names of all characters stored in the repository
 func (repository *CharacterJSONRepository) List() ([]string, error) {
-	jsonService, err := services.NewJSONService(repository.folder)
+	jsonService, err := infrastructure.NewJSONService(repository.folder)
 	if err != nil {
 		return nil, err
 	}
@@ -47,7 +47,7 @@ func (repository *CharacterJSONRepository) List() ([]string, error) {
 
 // Delete removes a character from the repository by name
 func (repository *CharacterJSONRepository) Delete(name string) error {
-	jsonService, err := services.NewJSONService(repository.folder)
+	jsonService, err := infrastructure.NewJSONService(repository.folder)
 	if err != nil {
 		return err
 	}
@@ -58,7 +58,7 @@ func (repository *CharacterJSONRepository) Delete(name string) error {
 // Get retrieves a character from the repository by name
 // It returns the character if found, or an error if not found
 func (repository *CharacterJSONRepository) Get(name string) (*domain.Character, error) {
-	jsonService, err := services.NewJSONService(repository.folder)
+	jsonService, err := infrastructure.NewJSONService(repository.folder)
 	if err != nil {
 		return nil, err
 	}

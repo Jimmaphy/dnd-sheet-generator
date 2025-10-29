@@ -9,5 +9,9 @@
         "perception",
         "survival"
     ],
-    "CasterType": "none"
+    "CasterType": "none",
+    "UnarmoredDefenseModifiers": [
+        "Constitution", 
+        "Dexterity"
+    ]
 }

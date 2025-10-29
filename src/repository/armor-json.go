@@ -4,7 +4,7 @@ import (
 	"strings"
 
 	"github.com/jimmaphy/dnd-sheet-generator/domain"
-	"github.com/jimmaphy/dnd-sheet-generator/services"
+	"github.com/jimmaphy/dnd-sheet-generator/infrastructure"
 )
 
 type ArmorJSONRepository struct {
@@ -19,17 +19,24 @@ func NewArmorJSONRepository() *ArmorJSONRepository {
 	}
 }
 
-// Get retrieves a armor from the repository by name
-// It returns the armor if found, or an error if not found
-// It will be checked to make sure the name ends with " armor"
-func (repository *ArmorJSONRepository) Get(name string) (*domain.Armor, error) {
-	jsonService, err := services.NewJSONService(repository.folder)
+// Add a new armor to the repository
+// The armor will be saved as a JSON file named after the armor's name
+// The armor's name should be unique to avoid overwriting existing files
+func (repository *ArmorJSONRepository) Add(armor *domain.Armor) error {
+	jsonService, err := infrastructure.NewJSONService(repository.folder)
 	if err != nil {
-		return nil, err
+		return err
 	}
 
-	if !(strings.HasSuffix(strings.ToLower(name), " armor")) {
-		name = name + " armor"
+	return jsonService.Save(armor.Name, armor)
+}
+
+// Get retrieves a armor from the repository by name
+// It returns the armor if found, or an error if not found
+func (repository *ArmorJSONRepository) Get(name string) (*domain.Armor, error) {
+	jsonService, err := infrastructure.NewJSONService(repository.folder)
+	if err != nil {
+		return nil, err
 	}
 
 	var armor domain.Armor
@@ -39,4 +46,25 @@ func (repository *ArmorJSONRepository) Get(name string) (*domain.Armor, error) {
 	}
 
 	return &armor, nil
+}
+
+// List retrieves all armors from the repository
+// They wil be returned in lower case format
+func (repository *ArmorJSONRepository) List() ([]string, error) {
+	jsonService, err := infrastructure.NewJSONService(repository.folder)
+	if err != nil {
+		return nil, err
+	}
+
+	var armorNames []string
+	armorNames, err = jsonService.List()
+	if err != nil {
+		return nil, err
+	}
+
+	for i, name := range armorNames {
+		armorNames[i] = strings.ToLower(name)
+	}
+
+	return armorNames, nil
 }

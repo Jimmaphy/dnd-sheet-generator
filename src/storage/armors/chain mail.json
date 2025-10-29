@@ -1,0 +1,7 @@
+{
+  "Name": "chain mail",
+  "Type": "heavy armor",
+  "ArmorClass": 16,
+  "DexterityModifier": false,
+  "ModifierLimit": 0
+}

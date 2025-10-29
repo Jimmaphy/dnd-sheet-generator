@@ -1,0 +1,7 @@
+{
+  "Name": "crossbow, hand",
+  "Category": "martial",
+  "Type": "ranged",
+  "DamageDice": "1d6",
+  "DamageType": "piercing"
+}

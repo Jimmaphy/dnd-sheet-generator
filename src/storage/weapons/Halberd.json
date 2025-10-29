@@ -1,0 +1,7 @@
+{
+    "Name": "Halberd",
+    "Category": "Martial",
+    "Type": "Melee",
+    "DamageDice": "1d10",
+    "DamageType": "Slashing"
+}

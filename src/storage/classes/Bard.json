@@ -22,6 +22,8 @@
         "survival"
     ],
     "CasterType": "learned",
+    "CastAbility": "charisma",
+    "SpellSaveBase": 8,
     "Spells": [
         {"Name": "blade ward", "Level": 0},
         {"Name": "dancing lights", "Level": 0},

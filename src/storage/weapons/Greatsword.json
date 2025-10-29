@@ -1,0 +1,7 @@
+{
+    "Name": "Greatsword",
+    "Category": "Martial",
+    "Type": "Melee",
+    "DamageDice": "2d6",
+    "DamageType": "Slashing"
+}

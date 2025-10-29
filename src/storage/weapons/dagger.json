@@ -1,0 +1,7 @@
+{
+  "Name": "dagger",
+  "Category": "simple",
+  "Type": "melee",
+  "DamageDice": "1d4",
+  "DamageType": "piercing"
+}

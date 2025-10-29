@@ -1,0 +1,7 @@
+{
+    "Name": "Mace",
+    "Category": "Simple",
+    "Type": "Melee",
+    "DamageDice": "1d6",
+    "DamageType": "Bludgeoning"
+}

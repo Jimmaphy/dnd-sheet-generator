@@ -10,6 +10,8 @@
         "religion"
     ],
     "CasterType": "prepared",
+    "CastAbility": "intelligence",
+    "SpellSaveBase": 8,
     "Spells": [
         {"Name": "acid splash", "Level": 0},
         {"Name": "blade ward", "Level": 0},

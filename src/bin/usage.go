@@ -3,7 +3,7 @@ package bin
 import (
 	"fmt"
 
-	"github.com/jimmaphy/dnd-sheet-generator/services"
+	"github.com/jimmaphy/dnd-sheet-generator/infrastructure"
 )
 
 type UsageCommand struct{}
@@ -21,7 +21,7 @@ func (command *UsageCommand) ParseArguments(args []string) error {
 // Execute reads and prints the usage instructions from the usage.txt template file.
 // If the file cannot be read, an error message is printed and the program exits with status 1.
 func (command *UsageCommand) Execute() error {
-	templateService, err := services.NewTemplateService("usage.go")
+	templateService, err := infrastructure.NewTemplateService("usage.go")
 	if err != nil {
 		return err
 	}

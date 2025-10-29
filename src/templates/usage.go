@@ -8,4 +8,4 @@ Usage:
   equip -name CHARACTER_NAME -shield SHIELD_NAME
   learn-spell -name CHARACTER_NAME -spell SPELL_NAME
   prepare-spell -name CHARACTER_NAME -spell SPELL_NAME
-  launch-gui
+  update-data

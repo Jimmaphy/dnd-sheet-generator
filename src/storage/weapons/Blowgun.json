@@ -1,0 +1,7 @@
+{
+    "Name": "Blowgun",
+    "Category": "Martial",
+    "Type": "Ranged",
+    "DamageDice": "1",
+    "DamageType": "Piercing"
+}

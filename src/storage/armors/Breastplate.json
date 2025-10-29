@@ -1,0 +1,7 @@
+{
+    "Name": "breastplate",
+    "Type": "medium armor",
+    "ArmorClass": 14,
+    "DexterityModifier": true,
+    "ModifierLimit": 2
+}

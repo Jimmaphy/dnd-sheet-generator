@@ -1,0 +1,7 @@
+{
+    "Name": "Dart",
+    "Category": "Simple",
+    "Type": "Ranged",
+    "DamageDice": "1d4",
+    "DamageType": "Piercing"
+}

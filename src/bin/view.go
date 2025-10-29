@@ -5,8 +5,8 @@ import (
 	"flag"
 	"os"
 
+	"github.com/jimmaphy/dnd-sheet-generator/infrastructure"
 	"github.com/jimmaphy/dnd-sheet-generator/repository"
-	"github.com/jimmaphy/dnd-sheet-generator/services"
 )
 
 type viewCommand struct {
@@ -45,7 +45,7 @@ func (command *viewCommand) Execute() error {
 		return errors.New("character \"" + command.name + "\" not found")
 	}
 
-	templateService, err := services.NewTemplateService("view.go")
+	templateService, err := infrastructure.NewTemplateService("view.go")
 	if err != nil {
 		return err
 	}

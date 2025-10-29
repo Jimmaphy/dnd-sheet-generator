@@ -12,6 +12,8 @@
         "survival"
     ],
     "CasterType": "prepared",
+    "CastAbility": "wisdom",
+    "SpellSaveBase": 8,
     "Spells": [
         {"Name": "alarm", "Level": 1},
         {"Name": "animal friendship", "Level": 1},

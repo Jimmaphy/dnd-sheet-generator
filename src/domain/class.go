@@ -8,12 +8,15 @@ import (
 )
 
 type Class struct {
-	Name        string
-	SkillCount  int
-	Skills      []string
-	CasterType  string
-	SpellLevels []SpellLevel
-	Spells      []*Spell
+	Name                      string
+	SkillCount                int
+	Skills                    []string
+	CasterType                string
+	SpellLevels               []*SpellLevel
+	Spells                    []*Spell
+	UnarmoredDefenseModifiers []string
+	CastAbility               string
+	SpellSaveBase             int
 }
 
 // Create a new class based on the provided name.
@@ -43,9 +46,21 @@ func (class *Class) GetSpell(spellName string, level int) (*Spell, error) {
 }
 
 // CanCastsSpells checks if the class can cast spells.
-// The function returns false if the CasterType is "none", true otherwise.
-func (class *Class) CanCastSpells() bool {
-	return class.CasterType != "none"
+// Whenever the class is a caster, the class is checked for available spell slots at the given level.
+func (class *Class) CanCastSpells(level int) bool {
+	if class.CasterType != "none" {
+		if len(class.SpellLevels) == 0 {
+			return false
+		}
+
+		for spellLevel := range 9 {
+			if class.GetSpellSlots(level, spellLevel) > 0 {
+				return true
+			}
+		}
+	}
+
+	return false
 }
 
 // GetSpellSlots returns the spell slots available for a given spell level.

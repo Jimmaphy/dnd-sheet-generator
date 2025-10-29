@@ -1,0 +1,7 @@
+{
+    "Name": "Trident",
+    "Category": "Martial",
+    "Type": "Melee",
+    "DamageDice": "1d6",
+    "DamageType": "Piercing"
+}

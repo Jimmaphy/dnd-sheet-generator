@@ -1,0 +1,7 @@
+{
+    "Name": "Club",
+    "Category": "Simple",
+    "Type": "Melee",
+    "DamageDice": "1d4",
+    "DamageType": "Bludgeoning"
+}

@@ -1,0 +1,7 @@
+{
+    "Name": "Javelin",
+    "Category": "Simple",
+    "Type": "Melee",
+    "DamageDice": "1d6",
+    "DamageType": "Piercing"
+}

@@ -5,15 +5,16 @@ import (
 )
 
 var commands = map[string]func() Command{
-	"default": NewUsageCommand,
-	"usage":   NewUsageCommand,
-	"create":  NewCreateCommand,
-	"list":    NewListCommand,
-	"delete":  NewDeleteCommand,
-	"view":    NewViewCommand,
-	"equip":   NewEquipCommand,
-	"learn-spell": NewLearnSpellCommand,
+	"default":       NewUsageCommand,
+	"usage":         NewUsageCommand,
+	"create":        NewCreateCommand,
+	"list":          NewListCommand,
+	"delete":        NewDeleteCommand,
+	"view":          NewViewCommand,
+	"equip":         NewEquipCommand,
+	"learn-spell":   NewLearnSpellCommand,
 	"prepare-spell": NewPrepareSpellCommand,
+	"update-data":   NewUpdateDataCommand,
 }
 
 // GetCommander returns a Command instance based on the provided name.

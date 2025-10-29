@@ -1,0 +1,7 @@
+{
+    "Name": "Shortbow",
+    "Category": "Simple",
+    "Type": "Ranged",
+    "DamageDice": "1d6",
+    "DamageType": "Piercing"
+}

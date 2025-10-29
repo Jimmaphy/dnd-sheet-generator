@@ -10,6 +10,8 @@
         "religion"
     ],
     "CasterType": "prepared",
+    "CastAbility": "charisma",
+    "SpellSaveBase": 8,
     "Spells": [
         {"Name": "bless", "Level": 1},
         {"Name": "command", "Level": 1},

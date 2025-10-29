@@ -9,5 +9,9 @@
         "religion",
         "stealth"
     ],
-    "CasterType": "none"
+    "CasterType": "none",
+    "UnarmoredDefenseModifiers": [
+        "Wisdom", 
+        "Dexterity"
+    ]
 }

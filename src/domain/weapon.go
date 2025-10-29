@@ -1,7 +1,11 @@
 package domain
 
 type Weapon struct {
-	Name string
+	Name       string
+	Category   string
+	Type       string
+	DamageDice string
+	DamageType string
 }
 
 // Create a new instance of Weapon.
