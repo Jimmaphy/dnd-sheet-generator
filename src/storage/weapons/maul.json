@@ -1,0 +1,7 @@
+{
+  "Name": "maul",
+  "Category": "martial",
+  "Type": "melee",
+  "DamageDice": "2d6",
+  "DamageType": "bludgeoning"
+}

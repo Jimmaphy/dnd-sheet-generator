@@ -1,0 +1,7 @@
+{
+  "Name": "sling",
+  "Category": "simple",
+  "Type": "ranged",
+  "DamageDice": "1d4",
+  "DamageType": "bludgeoning"
+}

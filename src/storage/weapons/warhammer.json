@@ -1,6 +1,6 @@
 {
-  "Name": "greatclub",
-  "Category": "simple",
+  "Name": "warhammer",
+  "Category": "martial",
   "Type": "melee",
   "DamageDice": "1d8",
   "DamageType": "bludgeoning"

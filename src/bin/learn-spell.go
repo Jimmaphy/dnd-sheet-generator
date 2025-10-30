@@ -9,7 +9,7 @@ import (
 )
 
 type LearnSpellCommand struct {
-	name string
+	name  string
 	spell string
 }
 
@@ -61,6 +61,7 @@ func (command *LearnSpellCommand) Execute() error {
 		return err
 	}
 
+	characterRepository.Add(character)
 	fmt.Println("Learned spell", command.spell)
 	return nil
 }

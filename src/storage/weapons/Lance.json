@@ -1,7 +1,0 @@
-{
-    "Name": "Lance",
-    "Category": "Martial",
-    "Type": "Melee",
-    "DamageDice": "1d12",
-    "DamageType": "Piercing"
-}

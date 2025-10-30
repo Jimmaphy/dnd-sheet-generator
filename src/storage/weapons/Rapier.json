@@ -1,7 +1,0 @@
-{
-    "Name": "Rapier",
-    "Category": "Martial",
-    "Type": "Melee",
-    "DamageDice": "1d8",
-    "DamageType": "Piercing"
-}

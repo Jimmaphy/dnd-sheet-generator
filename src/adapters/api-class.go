@@ -7,16 +7,16 @@ import (
 )
 
 type ApiClass struct {
-	Name               string                   `json:"name"`
-	ProficiencyChoices []*ApiProficiencyChoices `json:"proficiency_choices"`
-	SpellCasting       ApiSpellCasting          `json:"spellcasting"`
-	SpellUrl           string                   `json:"spells"`
+	Name               string                  `json:"name"`
+	ProficiencyChoices []ApiProficiencyChoices `json:"proficiency_choices"`
+	SpellCasting       ApiSpellCasting         `json:"spellcasting"`
+	SpellUrl           string                  `json:"spells"`
 }
 
 // ToDomainModel converts the ApiClass to a domain model Class
 func (response *ApiClass) ToDomainModel(spells []*domain.Spell, spellLevels []*domain.SpellLevel) *domain.Class {
 	return &domain.Class{
-		Name:          response.Name,
+		Name:          strings.ToLower(response.Name),
 		SkillCount:    response.ProficiencyChoices[0].Choose,
 		Skills:        response.getSkillOptions(),
 		CasterType:    response.getCasterType(),
@@ -32,10 +32,10 @@ func (response *ApiClass) ToDomainModel(spells []*domain.Spell, spellLevels []*d
 func (response *ApiClass) getSkillOptions() []string {
 	skillOptions := []string{}
 
-	for _, option := range response.ProficiencyChoices[0].From {
-		for _, listing := range option.Options {
-			skillOptions = append(skillOptions, listing.Item.Name)
-		}
+	for _, option := range response.ProficiencyChoices[0].From.Options {
+		name, _ := strings.CutPrefix(option.Item.Name, "Skill: ")
+		name = strings.ToLower(name)
+		skillOptions = append(skillOptions, name)
 	}
 
 	return skillOptions
@@ -52,6 +52,10 @@ func (response *ApiClass) getCasterType() string {
 
 	if response.Name == "Warlock" {
 		return "pact"
+	}
+
+	if len(response.SpellCasting.Info) == 0 {
+		return "none"
 	}
 
 	return "learned"

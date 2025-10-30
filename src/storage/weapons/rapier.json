@@ -1,0 +1,7 @@
+{
+  "Name": "rapier",
+  "Category": "martial",
+  "Type": "melee",
+  "DamageDice": "1d8",
+  "DamageType": "piercing"
+}

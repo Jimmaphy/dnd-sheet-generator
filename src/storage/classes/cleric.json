@@ -1,0 +1,687 @@
+{
+  "Name": "cleric",
+  "SkillCount": 2,
+  "Skills": [
+    "history",
+    "insight",
+    "medicine",
+    "persuasion",
+    "religion"
+  ],
+  "CasterType": "prepared",
+  "SpellLevels": [
+    {
+      "Level": 1,
+      "SpellsKnown": 0,
+      "Slots": {
+        "0": 3,
+        "1": 2
+      }
+    },
+    {
+      "Level": 2,
+      "SpellsKnown": 0,
+      "Slots": {
+        "0": 3,
+        "1": 3
+      }
+    },
+    {
+      "Level": 3,
+      "SpellsKnown": 0,
+      "Slots": {
+        "0": 3,
+        "1": 4,
+        "2": 2
+      }
+    },
+    {
+      "Level": 4,
+      "SpellsKnown": 0,
+      "Slots": {
+        "0": 4,
+        "1": 4,
+        "2": 3
+      }
+    },
+    {
+      "Level": 5,
+      "SpellsKnown": 0,
+      "Slots": {
+        "0": 4,
+        "1": 4,
+        "2": 3,
+        "3": 2
+      }
+    },
+    {
+      "Level": 6,
+      "SpellsKnown": 0,
+      "Slots": {
+        "0": 4,
+        "1": 4,
+        "2": 3,
+        "3": 3
+      }
+    },
+    {
+      "Level": 7,
+      "SpellsKnown": 0,
+      "Slots": {
+        "0": 4,
+        "1": 4,
+        "2": 3,
+        "3": 3,
+        "4": 1
+      }
+    },
+    {
+      "Level": 8,
+      "SpellsKnown": 0,
+      "Slots": {
+        "0": 4,
+        "1": 4,
+        "2": 3,
+        "3": 3,
+        "4": 2
+      }
+    },
+    {
+      "Level": 9,
+      "SpellsKnown": 0,
+      "Slots": {
+        "0": 4,
+        "1": 4,
+        "2": 3,
+        "3": 3,
+        "4": 3,
+        "5": 1
+      }
+    },
+    {
+      "Level": 10,
+      "SpellsKnown": 0,
+      "Slots": {
+        "0": 5,
+        "1": 4,
+        "2": 3,
+        "3": 3,
+        "4": 3,
+        "5": 2
+      }
+    },
+    {
+      "Level": 11,
+      "SpellsKnown": 0,
+      "Slots": {
+        "0": 5,
+        "1": 4,
+        "2": 3,
+        "3": 3,
+        "4": 3,
+        "5": 2,
+        "6": 1
+      }
+    },
+    {
+      "Level": 12,
+      "SpellsKnown": 0,
+      "Slots": {
+        "0": 5,
+        "1": 4,
+        "2": 3,
+        "3": 3,
+        "4": 3,
+        "5": 2,
+        "6": 1
+      }
+    },
+    {
+      "Level": 13,
+      "SpellsKnown": 0,
+      "Slots": {
+        "0": 5,
+        "1": 4,
+        "2": 3,
+        "3": 3,
+        "4": 3,
+        "5": 2,
+        "6": 1,
+        "7": 1
+      }
+    },
+    {
+      "Level": 14,
+      "SpellsKnown": 0,
+      "Slots": {
+        "0": 5,
+        "1": 4,
+        "2": 3,
+        "3": 3,
+        "4": 3,
+        "5": 2,
+        "6": 1,
+        "7": 1
+      }
+    },
+    {
+      "Level": 15,
+      "SpellsKnown": 0,
+      "Slots": {
+        "0": 5,
+        "1": 4,
+        "2": 3,
+        "3": 3,
+        "4": 3,
+        "5": 2,
+        "6": 1,
+        "7": 1,
+        "8": 1
+      }
+    },
+    {
+      "Level": 16,
+      "SpellsKnown": 0,
+      "Slots": {
+        "0": 5,
+        "1": 4,
+        "2": 3,
+        "3": 3,
+        "4": 3,
+        "5": 2,
+        "6": 1,
+        "7": 1,
+        "8": 1
+      }
+    },
+    {
+      "Level": 17,
+      "SpellsKnown": 0,
+      "Slots": {
+        "0": 5,
+        "1": 4,
+        "2": 3,
+        "3": 3,
+        "4": 3,
+        "5": 2,
+        "6": 1,
+        "7": 1,
+        "8": 1,
+        "9": 1
+      }
+    },
+    {
+      "Level": 18,
+      "SpellsKnown": 0,
+      "Slots": {
+        "0": 5,
+        "1": 4,
+        "2": 3,
+        "3": 3,
+        "4": 3,
+        "5": 3,
+        "6": 1,
+        "7": 1,
+        "8": 1,
+        "9": 1
+      }
+    },
+    {
+      "Level": 19,
+      "SpellsKnown": 0,
+      "Slots": {
+        "0": 5,
+        "1": 4,
+        "2": 3,
+        "3": 3,
+        "4": 3,
+        "5": 3,
+        "6": 2,
+        "7": 1,
+        "8": 1,
+        "9": 1
+      }
+    },
+    {
+      "Level": 20,
+      "SpellsKnown": 0,
+      "Slots": {
+        "0": 5,
+        "1": 4,
+        "2": 3,
+        "3": 3,
+        "4": 3,
+        "5": 3,
+        "6": 2,
+        "7": 2,
+        "8": 1,
+        "9": 1
+      }
+    }
+  ],
+  "Spells": [
+    {
+      "Name": "guidance",
+      "Level": 0
+    },
+    {
+      "Name": "light",
+      "Level": 0
+    },
+    {
+      "Name": "mending",
+      "Level": 0
+    },
+    {
+      "Name": "resistance",
+      "Level": 0
+    },
+    {
+      "Name": "sacred flame",
+      "Level": 0
+    },
+    {
+      "Name": "spare the dying",
+      "Level": 0
+    },
+    {
+      "Name": "thaumaturgy",
+      "Level": 0
+    },
+    {
+      "Name": "bane",
+      "Level": 1
+    },
+    {
+      "Name": "bless",
+      "Level": 1
+    },
+    {
+      "Name": "command",
+      "Level": 1
+    },
+    {
+      "Name": "create or destroy water",
+      "Level": 1
+    },
+    {
+      "Name": "cure wounds",
+      "Level": 1
+    },
+    {
+      "Name": "detect evil and good",
+      "Level": 1
+    },
+    {
+      "Name": "detect magic",
+      "Level": 1
+    },
+    {
+      "Name": "detect poison and disease",
+      "Level": 1
+    },
+    {
+      "Name": "guiding bolt",
+      "Level": 1
+    },
+    {
+      "Name": "healing word",
+      "Level": 1
+    },
+    {
+      "Name": "inflict wounds",
+      "Level": 1
+    },
+    {
+      "Name": "protection from evil and good",
+      "Level": 1
+    },
+    {
+      "Name": "purify food and drink",
+      "Level": 1
+    },
+    {
+      "Name": "sanctuary",
+      "Level": 1
+    },
+    {
+      "Name": "shield of faith",
+      "Level": 1
+    },
+    {
+      "Name": "aid",
+      "Level": 2
+    },
+    {
+      "Name": "augury",
+      "Level": 2
+    },
+    {
+      "Name": "blindness/deafness",
+      "Level": 2
+    },
+    {
+      "Name": "calm emotions",
+      "Level": 2
+    },
+    {
+      "Name": "continual flame",
+      "Level": 2
+    },
+    {
+      "Name": "enhance ability",
+      "Level": 2
+    },
+    {
+      "Name": "find traps",
+      "Level": 2
+    },
+    {
+      "Name": "gentle repose",
+      "Level": 2
+    },
+    {
+      "Name": "hold person",
+      "Level": 2
+    },
+    {
+      "Name": "lesser restoration",
+      "Level": 2
+    },
+    {
+      "Name": "locate object",
+      "Level": 2
+    },
+    {
+      "Name": "prayer of healing",
+      "Level": 2
+    },
+    {
+      "Name": "protection from poison",
+      "Level": 2
+    },
+    {
+      "Name": "silence",
+      "Level": 2
+    },
+    {
+      "Name": "spiritual weapon",
+      "Level": 2
+    },
+    {
+      "Name": "warding bond",
+      "Level": 2
+    },
+    {
+      "Name": "zone of truth",
+      "Level": 2
+    },
+    {
+      "Name": "animate dead",
+      "Level": 3
+    },
+    {
+      "Name": "beacon of hope",
+      "Level": 3
+    },
+    {
+      "Name": "bestow curse",
+      "Level": 3
+    },
+    {
+      "Name": "clairvoyance",
+      "Level": 3
+    },
+    {
+      "Name": "create food and water",
+      "Level": 3
+    },
+    {
+      "Name": "daylight",
+      "Level": 3
+    },
+    {
+      "Name": "dispel magic",
+      "Level": 3
+    },
+    {
+      "Name": "glyph of warding",
+      "Level": 3
+    },
+    {
+      "Name": "magic circle",
+      "Level": 3
+    },
+    {
+      "Name": "mass healing word",
+      "Level": 3
+    },
+    {
+      "Name": "meld into stone",
+      "Level": 3
+    },
+    {
+      "Name": "protection from energy",
+      "Level": 3
+    },
+    {
+      "Name": "remove curse",
+      "Level": 3
+    },
+    {
+      "Name": "revivify",
+      "Level": 3
+    },
+    {
+      "Name": "sending",
+      "Level": 3
+    },
+    {
+      "Name": "speak with dead",
+      "Level": 3
+    },
+    {
+      "Name": "spirit guardians",
+      "Level": 3
+    },
+    {
+      "Name": "tongues",
+      "Level": 3
+    },
+    {
+      "Name": "water walk",
+      "Level": 3
+    },
+    {
+      "Name": "arcane eye",
+      "Level": 4
+    },
+    {
+      "Name": "banishment",
+      "Level": 4
+    },
+    {
+      "Name": "control water",
+      "Level": 4
+    },
+    {
+      "Name": "death ward",
+      "Level": 4
+    },
+    {
+      "Name": "freedom of movement",
+      "Level": 4
+    },
+    {
+      "Name": "guardian of faith",
+      "Level": 4
+    },
+    {
+      "Name": "locate creature",
+      "Level": 4
+    },
+    {
+      "Name": "stone shape",
+      "Level": 4
+    },
+    {
+      "Name": "commune",
+      "Level": 5
+    },
+    {
+      "Name": "contagion",
+      "Level": 5
+    },
+    {
+      "Name": "dispel evil and good",
+      "Level": 5
+    },
+    {
+      "Name": "flame strike",
+      "Level": 5
+    },
+    {
+      "Name": "geas",
+      "Level": 5
+    },
+    {
+      "Name": "greater restoration",
+      "Level": 5
+    },
+    {
+      "Name": "hallow",
+      "Level": 5
+    },
+    {
+      "Name": "insect plague",
+      "Level": 5
+    },
+    {
+      "Name": "legend lore",
+      "Level": 5
+    },
+    {
+      "Name": "mass cure wounds",
+      "Level": 5
+    },
+    {
+      "Name": "planar binding",
+      "Level": 5
+    },
+    {
+      "Name": "raise dead",
+      "Level": 5
+    },
+    {
+      "Name": "scrying",
+      "Level": 5
+    },
+    {
+      "Name": "blade barrier",
+      "Level": 6
+    },
+    {
+      "Name": "create undead",
+      "Level": 6
+    },
+    {
+      "Name": "find the path",
+      "Level": 6
+    },
+    {
+      "Name": "forbiddance",
+      "Level": 6
+    },
+    {
+      "Name": "harm",
+      "Level": 6
+    },
+    {
+      "Name": "heal",
+      "Level": 6
+    },
+    {
+      "Name": "heroes' feast",
+      "Level": 6
+    },
+    {
+      "Name": "planar ally",
+      "Level": 6
+    },
+    {
+      "Name": "true seeing",
+      "Level": 6
+    },
+    {
+      "Name": "word of recall",
+      "Level": 6
+    },
+    {
+      "Name": "conjure celestial",
+      "Level": 7
+    },
+    {
+      "Name": "divine word",
+      "Level": 7
+    },
+    {
+      "Name": "etherealness",
+      "Level": 7
+    },
+    {
+      "Name": "fire storm",
+      "Level": 7
+    },
+    {
+      "Name": "plane shift",
+      "Level": 7
+    },
+    {
+      "Name": "regenerate",
+      "Level": 7
+    },
+    {
+      "Name": "resurrection",
+      "Level": 7
+    },
+    {
+      "Name": "symbol",
+      "Level": 7
+    },
+    {
+      "Name": "antimagic field",
+      "Level": 8
+    },
+    {
+      "Name": "control weather",
+      "Level": 8
+    },
+    {
+      "Name": "earthquake",
+      "Level": 8
+    },
+    {
+      "Name": "holy aura",
+      "Level": 8
+    },
+    {
+      "Name": "astral projection",
+      "Level": 9
+    },
+    {
+      "Name": "gate",
+      "Level": 9
+    },
+    {
+      "Name": "mass heal",
+      "Level": 9
+    },
+    {
+      "Name": "true resurrection",
+      "Level": 9
+    }
+  ],
+  "UnarmoredDefenseModifiers": null,
+  "CastAbility": "wisdom",
+  "SpellSaveBase": 8
+}

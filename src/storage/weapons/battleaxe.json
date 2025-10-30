@@ -1,0 +1,7 @@
+{
+  "Name": "battleaxe",
+  "Category": "martial",
+  "Type": "melee",
+  "DamageDice": "1d8",
+  "DamageType": "slashing"
+}

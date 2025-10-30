@@ -1,7 +1,7 @@
 {
-  "Name": "greatclub",
+  "Name": "club",
   "Category": "simple",
   "Type": "melee",
-  "DamageDice": "1d8",
+  "DamageDice": "1d4",
   "DamageType": "bludgeoning"
 }

@@ -1,7 +1,0 @@
-{
-    "Name": "Light Crossbow",
-    "Category": "Simple",
-    "Type": "Ranged",
-    "DamageDice": "1d8",
-    "DamageType": "Piercing"
-}

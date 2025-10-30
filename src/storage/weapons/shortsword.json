@@ -1,0 +1,7 @@
+{
+  "Name": "shortsword",
+  "Category": "martial",
+  "Type": "melee",
+  "DamageDice": "1d6",
+  "DamageType": "piercing"
+}

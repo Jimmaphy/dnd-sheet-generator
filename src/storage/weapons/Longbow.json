@@ -1,7 +1,0 @@
-{
-    "Name": "Longbow",
-    "Category": "Martial",
-    "Type": "Ranged",
-    "DamageDice": "1d8",
-    "DamageType": "Piercing"
-}

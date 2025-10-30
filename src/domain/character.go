@@ -4,6 +4,7 @@ import (
 	"errors"
 	"fmt"
 	"math"
+	"slices"
 	"strings"
 )
 
@@ -19,7 +20,7 @@ type Character struct {
 	OffHand     *Weapon
 	Armor       *Armor
 	Shield      *Shield
-	Spells      []*Spell
+	Spells      []Spell
 }
 
 // NewCharacter creates a new Character instance with the given name.
@@ -28,7 +29,7 @@ func NewCharacter(name string, level int) *Character {
 	return &Character{
 		Name:   name,
 		Level:  level,
-		Spells: []*Spell{},
+		Spells: []Spell{},
 	}
 }
 
@@ -60,8 +61,20 @@ func (character *Character) AddSpell(spellName string) error {
 		return err
 	}
 
-	character.Spells = append(character.Spells, spell)
+	character.Spells = append(character.Spells, *spell)
 	return nil
+}
+
+// GetSpellStrings combines alle spell names into a single string,
+// These are the spells the character has learned or prepared.
+func (character *Character) GetSpellString() string {
+	spellNames := []string{}
+
+	for _, spell := range character.Spells {
+		spellNames = append(spellNames, spell.Name)
+	}
+
+	return strings.Join(spellNames, ", ")
 }
 
 // The EquipArmor method equips an armor to the character.
@@ -114,14 +127,29 @@ func (character *Character) GetPassivePerception() int {
 	return 10 + wisdomModifier
 }
 
+// IsProficient checks if the character is proficient in the given skill.
+// Returns true if proficient, false otherwise.
+func (character *Character) IsProficient(skillName string) bool {
+	return slices.Contains(character.GetSkillProficiency(), skillName)
+}
+
+// GetSkillBonusString returns the skill bonus string for a given skill name.
+// The function that the main skill name, like dexterity, and returns the modifier as a string with a '+' sign.
+// As second parameter, it takes the name of the skill to check for proficiency.
+func (character *Character) GetSkillBonusString(mainSkill string, skillName string) string {
+	modifier := character.TotalSkills.GetModifierByName(mainSkill)
+
+	if character.IsProficient(skillName) {
+		modifier += character.GetProficiencyBonus()
+	}
+
+	return fmt.Sprintf("+%d", modifier)
+}
+
 // GetSpellSaveDC calculates the spell save DC for the character.
 // The formula is 8 + proficiency bonus + spellcasting ability modifier.
 // If the character has no class, 0 is returned.
 func (character *Character) GetSpellSaveDC() int {
-	if character.Class == nil {
-		return 0
-	}
-
 	castAbility := character.Class.CastAbility
 	castModifier := character.TotalSkills.GetModifierByName(castAbility)
 	spellSaveDC := 8 + character.GetProficiencyBonus() + castModifier
@@ -134,10 +162,6 @@ func (character *Character) GetSpellSaveDC() int {
 // The returned string includes a '+' sign.
 // If the character has no class, an empty string is returned.
 func (character *Character) GetSpellAttackBonusString() string {
-	if character.Class == nil {
-		return ""
-	}
-
 	castAbility := character.Class.CastAbility
 	castModifier := character.TotalSkills.GetModifierByName(castAbility)
 	spellAttackBonus := character.GetProficiencyBonus() + castModifier
@@ -145,15 +169,23 @@ func (character *Character) GetSpellAttackBonusString() string {
 	return fmt.Sprintf("+%d", spellAttackBonus)
 }
 
+// GetSkillProficiency returns a slice of skill names that the character is proficient in.
+// The skills are taken from the character's class, based on the skill count.
+// Then two additional skills are taken from the character's background.
+func (character *Character) GetSkillProficiency() []string {
+	classSkillCount := character.Class.SkillCount
+	proficiencies := []string{}
+	proficiencies = append(proficiencies, character.Class.Skills[:classSkillCount]...)
+	proficiencies = append(proficiencies, character.Background.Skills[:2]...)
+
+	return proficiencies
+}
+
 // GetSkillProficiencyString returns the skill proficiency string.
 // The skills are represented as a comma-separated list.
 // First, the skills are taken from the character's class, based on the skill count.
 // Then two additional skills are taken from the character's background.
 func (character *Character) GetSkillProficiencyString() (string, error) {
-	if character.Class == nil || character.Background == nil {
-		return "", errors.New("cannot get skill proficiencies without class or background")
-	}
-
 	classSkillCount := character.Class.SkillCount
 	proficiencies := []string{}
 	proficiencies = append(proficiencies, character.Class.Skills[:classSkillCount]...)

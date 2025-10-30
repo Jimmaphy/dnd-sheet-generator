@@ -1,0 +1,20 @@
+{
+  "Name": "fighter",
+  "SkillCount": 2,
+  "Skills": [
+    "acrobatics",
+    "animal handling",
+    "athletics",
+    "history",
+    "insight",
+    "intimidation",
+    "perception",
+    "survival"
+  ],
+  "CasterType": "none",
+  "SpellLevels": null,
+  "Spells": null,
+  "UnarmoredDefenseModifiers": null,
+  "CastAbility": "",
+  "SpellSaveBase": 8
+}

@@ -1,7 +1,0 @@
-{
-    "Name": "Whip",
-    "Category": "Martial",
-    "Type": "Melee",
-    "DamageDice": "1d4",
-    "DamageType": "Slashing"
-}

@@ -1,7 +1,7 @@
 {
-  "Name": "greatclub",
+  "Name": "quarterstaff",
   "Category": "simple",
   "Type": "melee",
-  "DamageDice": "1d8",
+  "DamageDice": "1d6",
   "DamageType": "bludgeoning"
 }

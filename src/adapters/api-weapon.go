@@ -7,10 +7,10 @@ import (
 )
 
 type ApiWeapon struct {
-	Name     string           `json:"name"`
-	Category string           `json:"weapon_category"`
-	Range    string           `json:"weapon_range"`
-	Damage   *ApiWeaponDamage `json:"damage"`
+	Name     string          `json:"name"`
+	Category string          `json:"weapon_category"`
+	Range    string          `json:"weapon_range"`
+	Damage   ApiWeaponDamage `json:"damage"`
 }
 
 // ToDomainModel takes the ApiWeapon and converts it to the domain model Weapon

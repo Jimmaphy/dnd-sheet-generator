@@ -1,6 +1,10 @@
 package adapters
 
-import "github.com/jimmaphy/dnd-sheet-generator/domain"
+import (
+	"strings"
+
+	"github.com/jimmaphy/dnd-sheet-generator/domain"
+)
 
 type ApiSpell struct {
 	Index string `json:"index"`
@@ -12,7 +16,7 @@ type ApiSpell struct {
 // ToDomainModel converts the ApiSpell to the domain model Spell.
 func (apiSpell *ApiSpell) ToDomainModel() *domain.Spell {
 	return &domain.Spell{
-		Name:  apiSpell.Name,
+		Name:  strings.ToLower(apiSpell.Name),
 		Level: apiSpell.Level,
 	}
 }

@@ -1,7 +1,0 @@
-{
-    "Name": "half plate",
-    "Type": "medium armor",
-    "ArmorClass": 15,
-    "DexterityModifier": true,
-    "ModifierLimit": 2
-}

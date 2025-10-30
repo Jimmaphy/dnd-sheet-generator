@@ -1,0 +1,7 @@
+{
+  "Name": "pike",
+  "Category": "martial",
+  "Type": "melee",
+  "DamageDice": "1d10",
+  "DamageType": "piercing"
+}

@@ -9,7 +9,7 @@ import (
 )
 
 type PrepareSpellCommand struct {
-	name string
+	name  string
 	spell string
 }
 
@@ -65,6 +65,7 @@ func (command *PrepareSpellCommand) Execute() error {
 		return err
 	}
 
+	characterRepository.Add(character)
 	fmt.Println("Prepared spell", command.spell)
 	return nil
 }
