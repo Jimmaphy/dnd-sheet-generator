@@ -1,4 +1,6 @@
 Name: {{.Name}}
+Hit die: {{.Class.HitDie}}
+Total hit points: {{.GetHitPoints}}
 Class: {{.Class.Name}}
 Race: {{.Race.Name}}
 Background: {{.Background.Name}}

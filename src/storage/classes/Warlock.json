@@ -1,5 +1,6 @@
 {
     "Name": "warlock",
+    "HitDie": 8,
     "SkillCount": 2,
     "Skills": [
         "arcana",

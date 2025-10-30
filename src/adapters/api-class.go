@@ -8,6 +8,7 @@ import (
 
 type ApiClass struct {
 	Name               string                  `json:"name"`
+	HitDie             int                     `json:"hit_die"`
 	ProficiencyChoices []ApiProficiencyChoices `json:"proficiency_choices"`
 	SpellCasting       ApiSpellCasting         `json:"spellcasting"`
 	SpellUrl           string                  `json:"spells"`
@@ -17,6 +18,7 @@ type ApiClass struct {
 func (response *ApiClass) ToDomainModel(spells []*domain.Spell, spellLevels []*domain.SpellLevel) *domain.Class {
 	return &domain.Class{
 		Name:          strings.ToLower(response.Name),
+		HitDie:        response.HitDie,
 		SkillCount:    response.ProficiencyChoices[0].Choose,
 		Skills:        response.getSkillOptions(),
 		CasterType:    response.getCasterType(),

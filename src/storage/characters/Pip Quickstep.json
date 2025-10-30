@@ -1,0 +1,103 @@
+{
+  "Name": "Pip Quickstep",
+  "Race": {
+    "Name": "halfling",
+    "SkillModifiers": {
+      "Strength": {
+        "Value": 0
+      },
+      "Dexterity": {
+        "Value": 2
+      },
+      "Constitution": {
+        "Value": 0
+      },
+      "Intelligence": {
+        "Value": 0
+      },
+      "Wisdom": {
+        "Value": 0
+      },
+      "Charisma": {
+        "Value": 0
+      }
+    }
+  },
+  "Class": {
+    "Name": "rogue",
+    "HitDie": 8,
+    "SkillCount": 4,
+    "Skills": [
+      "acrobatics",
+      "athletics",
+      "deception",
+      "insight",
+      "intimidation",
+      "investigation",
+      "perception",
+      "performance",
+      "persuasion",
+      "sleight of hand",
+      "stealth"
+    ],
+    "CasterType": "none",
+    "SpellLevels": null,
+    "Spells": null,
+    "UnarmoredDefenseModifiers": null,
+    "CastAbility": "",
+    "SpellSaveBase": 0
+  },
+  "Background": {
+    "Name": "acolyte",
+    "Skills": [
+      "insight",
+      "religion"
+    ]
+  },
+  "Level": 2,
+  "BaseSkills": {
+    "Strength": {
+      "Value": 10
+    },
+    "Dexterity": {
+      "Value": 16
+    },
+    "Constitution": {
+      "Value": 12
+    },
+    "Intelligence": {
+      "Value": 13
+    },
+    "Wisdom": {
+      "Value": 11
+    },
+    "Charisma": {
+      "Value": 14
+    }
+  },
+  "TotalSkills": {
+    "Strength": {
+      "Value": 10
+    },
+    "Dexterity": {
+      "Value": 18
+    },
+    "Constitution": {
+      "Value": 12
+    },
+    "Intelligence": {
+      "Value": 13
+    },
+    "Wisdom": {
+      "Value": 11
+    },
+    "Charisma": {
+      "Value": 14
+    }
+  },
+  "MainHand": null,
+  "OffHand": null,
+  "Armor": null,
+  "Shield": null,
+  "Spells": []
+}

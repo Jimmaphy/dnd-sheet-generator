@@ -1,5 +1,6 @@
 {
   "Name": "fighter",
+  "HitDie": 10,
   "SkillCount": 2,
   "Skills": [
     "acrobatics",

@@ -1,5 +1,6 @@
 {
     "Name": "paladin",
+    "HitDie": 10,
     "SkillCount": 2,
     "Skills": [
         "athletics",

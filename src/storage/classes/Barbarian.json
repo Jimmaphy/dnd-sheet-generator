@@ -1,5 +1,6 @@
 {
     "Name": "barbarian",
+    "HitDie": 12,
     "SkillCount": 2,
     "Skills": [
         "animal handling",

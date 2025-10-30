@@ -1,5 +1,6 @@
 {
     "Name": "wizard",
+    "HitDie": 6,
     "SkillCount": 2,
     "Skills": [
         "arcana",

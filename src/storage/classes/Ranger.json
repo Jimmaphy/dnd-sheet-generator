@@ -1,5 +1,6 @@
 {
     "Name": "ranger",
+    "HitDie": 10,
     "SkillCount": 3,
     "Skills": [
         "animal handling",

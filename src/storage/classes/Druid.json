@@ -1,5 +1,6 @@
 {
     "Name": "druid",
+    "HitDie": 8,
     "SkillCount": 2,
     "Skills": [
         "arcana",

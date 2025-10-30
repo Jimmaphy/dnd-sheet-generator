@@ -9,6 +9,7 @@ import (
 
 type Class struct {
 	Name                      string
+	HitDie                    int
 	SkillCount                int
 	Skills                    []string
 	CasterType                string
@@ -101,4 +102,22 @@ func (class *Class) SpellSlotsString(level int) string {
 
 	sort.Strings(slotsStrings)
 	return strings.Join(slotsStrings, "\n")
+}
+
+// GetHitDieAverage determines the average hit die value for the class.
+// It uses set values based on conventions.
+// D6 => 4, D8 => 5, D10 => 6, D12 => 7.
+func (class *Class) GetHitDieAverage() int {
+	switch class.HitDie {
+	case 6:
+		return 4
+	case 8:
+		return 5
+	case 10:
+		return 6
+	case 12:
+		return 7
+	default:
+		return 4
+	}
 }

@@ -1,5 +1,6 @@
 {
     "Name": "monk",
+    "HitDie": 8,
     "SkillCount": 2,
     "Skills": [
         "acrobatics",

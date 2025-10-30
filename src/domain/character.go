@@ -65,6 +65,16 @@ func (character *Character) AddSpell(spellName string) error {
 	return nil
 }
 
+// GetHitPoints calculates the total hit points of the character.
+// Base + (die-average * (level - 1)) + (constitution modifier * level)
+func (character *Character) GetHitPoints() int {
+	base := character.Class.HitDie
+	dice := character.Class.GetHitDieAverage() * (character.Level - 1)
+	constitution := character.TotalSkills.Constitution.GetModifier() * character.Level
+
+	return base + dice + constitution
+}
+
 // GetSpellStrings combines alle spell names into a single string,
 // These are the spells the character has learned or prepared.
 func (character *Character) GetSpellString() string {
