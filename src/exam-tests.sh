@@ -253,3 +253,6 @@ echo "TOTAL TESTS RUN: $((TESTS_SUCCEEDED + TESTS_FAILED))"
 echo "TESTS SUCCEEDED: $TESTS_SUCCEEDED"
 echo "TESTS FAILED:    $TESTS_FAILED"
 echo "===================="
+
+# Cleaup the executable
+rm -f ./dndcsg >> /dev/null 2>&1
