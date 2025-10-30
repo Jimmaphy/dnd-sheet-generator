@@ -165,6 +165,18 @@ func (command *UpdateDataCommand) downloadClass(name string, classRepository *re
 		levelDomainModels = append(levelDomainModels, level.ToDomainModel())
 	}
 
+	hasSpells := false
+	for _, level := range levelDomainModels {
+		if len(level.Slots) > 0 {
+			hasSpells = true
+			break
+		}
+	}
+
+	if !hasSpells {
+		levelDomainModels = nil
+	}
+
 	if fetchedSpells.Count > 0 {
 		for _, spell := range fetchedSpells.Results {
 			spellDomainModels = append(spellDomainModels, spell.ToDomainModel())
