@@ -160,6 +160,24 @@ else
     echo "        [ERROR] Thrain Stonefist export has incorrect current hit points"
 fi
 
+output=$(grep -a '<input name="totalhd" placeholder="2d10" type="text" value="2d8"/>' './export/Pip Quickstep.html' 2>&1)
+if [[ $output ]]; then
+    TESTS_SUCCEEDED=$((TESTS_SUCCEEDED + 1))
+    echo "        [SUCCESS] Pip Quickstep export has correct hit die"
+else
+    TESTS_FAILED=$((TESTS_FAILED + 1))
+    echo "        [ERROR] Pip Quickstep export has incorrect hit die"
+fi
+
+output=$(grep -a '<input name="totalhd" placeholder="2d10" type="text" value="6d12"/>' './export/Thrain Stonefist.html' 2>&1)
+if [[ $output ]]; then
+    TESTS_SUCCEEDED=$((TESTS_SUCCEEDED + 1))
+    echo "        [SUCCESS] Thrain Stonefist export has correct hit die"
+else
+    TESTS_FAILED=$((TESTS_FAILED + 1))
+    echo "        [ERROR] Thrain Stonefist export has incorrect hit die"
+fi
+
 
 
 # Test 7: Delete a class and make sure the class gets downloaded again

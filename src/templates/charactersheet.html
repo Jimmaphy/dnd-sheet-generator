@@ -235,7 +235,7 @@
         <div class="hitdice">
           <div>
             <div class="total">
-              <label onclick="totalhd_clicked()" for="totalhd">Total</label><input name="totalhd" placeholder="2d10" type="text" />
+                <label onclick="totalhd_clicked()" for="totalhd">Total</label><input name="totalhd" placeholder="2d10" type="text" value="{{.Level}}d{{.Class.HitDie}}"/>
             </div>
             <div class="remaining">
               <label for="remaininghd">Hit Dice</label><input name="remaininghd" type="text" />
